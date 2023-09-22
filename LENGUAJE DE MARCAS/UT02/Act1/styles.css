@@ -1,0 +1,30 @@
+#lies{object-fit:cover; 
+    width:180px;
+    height:160px; 
+    position:relative; 
+    float:right; 
+    margin-right:10%;}
+
+dd{margin-right:70%}
+li{font-size:20px; font-weight:400;}
+h1{font-size:50px; text-align:center; font-family:'M PLUS Code Latin', sans-serif; font-weight:600; }
+h2{font-size:30px; font-family: 'M PLUS Code Latin', sans-serif; font-weight:400;}
+h3{font-size:25px; font-family: 'M PLUS Code Latin', sans-serif; font-weight:400;}
+p{margin-right:60%; font-family: 'M PLUS Code Latin', sans-serif; font-weight:300;}
+body{
+    margin-left:250px;
+     margin-right:250px;
+     background-color:rgb(233, 209, 255);
+     font-family: 'M PLUS Code Latin', sans-serif; font-weight:300;}
+
+#header{
+    padding:1px;
+    margin-top:25px;
+    border-radius: 3px;}
+#main{
+    padding:1px;
+    margin-top:25px;
+    border-radius:5px;}
+.datosp{
+    margin-left:30px;
+    margin-right:30px;}
