@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>Pablo Coba Lodín</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,9 +12,10 @@
         <div id="header">
             <h1>Pablo Coba Lodín</h1>
         </div>
+
         <div id="main">
             <div class="datosp">
-                <img src="/Act1/pablo.jpg" alt="Yo">
+                <img class="pafoto" src="pablo.jpg" alt="Yo">
                 <h2>Datos Personales</h2>
             <p>
                 ¡Bienvenidos a mi página web! Aquí podréis conocerme más a fondo.<br>
@@ -24,22 +26,62 @@
                 aspiración de convertirme en artista de videojuegos, o ámbitos relacionados, desgraciadamente, no me gustó y lo dejé. Ahora estoy muy ilusionado con empezar este grado y, de momento, tanto profesores como contenidos me están gustand más y parecen mucho más entretenidos y gratificantes.
             </p>
             </div>
-                
-            <br><h3>Videojuegos Favoritos</h3>
-            <p>Aquí tenéis unas recomendaciones personales de temas que me interesan</p>
-            <ol>
-                <li>Lies of P</li>
-                    <img id="lies" src="https://www.mundodeportivo.com/alfabeta/hero/2023/09/lies-of-p-portada.1694537630.3993.jpg?width=768&aspect_ratio=16:9">
-                    <br><dd>El juego de categoría "soulslike" más reciente. Está muy pulido y tiene un gran sistema de combate. Es de muy alta dificultad pero merece la pena probarlo.</dd>
-                <br><li>Forza Motorsport</li>
-                    <br><dd>Aún no ha salido a día de hoy, pero promete ser un buen juego-simulador de coches para Xbox y PC y tengo altas expectativas.</dd>
-                <br><li>Minecraft</li>
-                    <br><dd>Imprescindible para cualquiera que tenga un ordenador.<br></dd>
-                <br><li>Undertale</li>
-                    <br><dd>Personalmente uno de mis juegos favoritos de la historia.</dd>
-                <br><li>It takes two</li>
-                    <br><dd>No es un juego de 10 en nada, pero es un 8 en todo, y el mejor juego cooperativo que he probado.</dd> 
-            </ol>
+               <div class="vjfav">
+                    <br><h3>Videojuegos Favoritos</h3>
+                    <p style="margin-right:auto">Aquí tenéis unas recomendaciones personales de videojuegos que me interesan</p>
+                    <ol>
+                        <li style="margin-top:0px; margin-bottom:2%;">Lies of P</li>        
+                            <img id="lies" src="https://www.mundodeportivo.com/alfabeta/hero/2023/09/lies-of-p-portada.1694537630.3993.jpg?width=768&aspect_ratio=16:9" alt="Lies of P image">
+                            <p style="margin-right:0;">El juego de categoría "soulslike" más reciente. Está muy pulido y tiene un gran sistema de combate. Es de muy alta dificultad pero merece la pena probarlo.</p>
+                        <li style="margin-top:200px; margin-bottom:2%;">Forza Motorsport</li>
+                            <img id="fm" src="https://s1.ppllstatics.com/elcorreo/www/multimedia/2023/09/12/2ff369b2-f256-49b3-a038-8a13566f5f9b-kKiB-U210137885815S2-758x531@El%20Correo.jpg" alt="Forza Motorsport image">
+                            <br><p>Aún no ha salido a día de hoy, pero promete ser un buen juego-simulador de coches para Xbox y PC y tengo altas expectativas.</p>
+                        <li style="margin-top:200px; margin-bottom:2%;">Minecraft</li>
+                            <img id="mc" src="https://i.stack.imgur.com/dqVlX.png" alt="minecraft cover image">
+                            <br><p>Imprescindible para cualquiera que tenga un ordenador.<br></p>
+                        <li style="margin-top:220px; margin-bottom:2%;">Undertale</li>
+                            <img id="undertale" src="https://i.blogs.es/2e7b35/undertale/1366_2000.png" alt="undertale cover image">
+                            <br><p>Personalmente uno de mis juegos favoritos de la historia.</p>
+                        <li style="margin-top:200px; margin-bottom:2%;">It takes two</li>
+                            <img id="takes2" src="https://variety.com/wp-content/uploads/2022/01/It-Takes-Two-e1643647274115.jpg" alt="It takes two cover">
+                            <br><p style="margin-bottom:10%">No es un juego de 10 en nada, pero es un 8 en todo, y el mejor juego cooperativo que he probado.</p> 
+                    </ol>
+                </div>
+
+            <div class="lugares">
+                <br><h3>Lugares que visitar</h3>
+                <p>Esta es una lista de lugares en los que he estado y recomiendo.</p>
+                <ul>
+                    <li>Oporto</li>
+                        <img id="listaul" src="https://a.cdn-hotels.com/gdcs/production183/d1429/9deb9d49-12dc-48f6-bf30-0b0ce6c10454.jpg?impolicy=fcrop&w=800&h=533&q=medium" alt="Oporto">
+                        <img style="height:270px" id="listaul" src="https://portoalities.com/wp-content/uploads/2021/07/paseo-tranvia-oporto.jpeg" alt="oporto2">
+                    <li style="margin-top:40px;">Cádiz</li>
+                        <img id="listaul" class="cadiz1" src="https://media.traveler.es/photos/62cfdbb797c921d93442da6b/16:9/w_2560%2Cc_limit/GettyImages-1270863248.jpg" alt="cadiz">
+                        <img id="listaul" src="https://guiadecadiz.com/sites/default/files/playa/Costa_noroeste/Rota/costa-ballena1.jpg" alt="cadiz2">
+                    <li style="margin-top:40px;">Ámsterdam</li>
+                        <img id="listaul" src="https://www.amsterdam.net/es/wp-content/uploads/sites/93/amsterdam-canales-puentes-hd.jpg" alt="amsterdam">
+                        <img id="listaul" src="https://viatravelers.com/wp-content/uploads/2022/06/St.-Nicholas-Church-1.jpg" alt="amsterdam2">
+                    <li style="margin-top:40px;">San Sebastian</li>
+                        <img id="listaul"  src="https://static.independent.co.uk/2023/08/23/16/iStock-1125788643.jpg" alt="sanse">
+                        <img id="listaul" src="https://st2.depositphotos.com/1679308/6926/i/450/depositphotos_69262211-stock-photo-san-sebastian-basque-country-spain.jpg" alt="sanse2">
+                    <li style="margin-top:40px;">París</li>
+                        <img id="listaul" src="https://viajes.nationalgeographic.com.es/medio/2022/07/13/paris_37bc088a_1280x720.jpg" alt="paris">
+                        <img id="listaul" src="https://images.livemint.com/img/2022/05/05/1140x641/paris_1651763662326_1651763690234.jpg" alt="paris2">                
+                </ul>
+            </div> 
+            <table>
+                <tr>
+                    <th>Profesor</th>
+                    <th>Asignatura</th>
+                    <th>Horas</th>
+                </tr>
+                <tr>
+                    <td>Isabel </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
         </div>
         
 
