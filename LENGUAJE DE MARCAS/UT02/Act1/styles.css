@@ -49,24 +49,40 @@
 
 }
 
-.lugares{
-    margin-top:12.5rem;
-    
+#lugares{
+    margin-top:0.8rem;
     margin-left:1.875rem;
     position:relative;
 }
 
-.vjfav{
-    margin-top:3.25rem;
+#vjfav{
+    height:100rem;
+    margin-top: 5rem;
     margin-left:1.875rem;
     position:relative;
     padding-right: 1.875rem;
+    margin-bottom:30rem;
 }
 
-#listaul{
+.fotosvj{
+    object-fit:cover; 
     width:22rem;
+    height:15rem; 
+    position:relative; 
+    float:left; 
+    margin-right:2rem;
+    margin-bottom:1rem;
+}
+
+.listaul{
+    object-fit:cover;
+    height:15rem;
+    max-width:22rem;
     position:relative;
-    margin: 3%;
+    margin: 1%;
+    width:100%;
+    min-width: 7rem;
+    margin-top:2%;
 }
 .cadiz1{
     object-fit:cover; 
@@ -74,41 +90,53 @@
 }
 
 table{
-    width:100%;
-    border-collapse:collapse;
+ 
+    width:70%;
+    border-collapse: collapse;
+    text-align:center;
 }
-
-dd{
-    
-    text-align:left;
-    position: relative;
+th{
+    border-bottom:1px solid rgb(171, 156, 202);
+    padding:1rem;
+    font-size:2.5vh; 
+}
+td{
     font-size:2vh;
-    min-width:5px;
-    }
+    font-weight:400;
+    padding:0.5rem;
+    border-bottom:1px solid rgb(171, 156, 202);
+}
+tr:nth-child(odd) {background-color:rgb(209, 187, 255);}
+tr:nth-child(even) {background-color:rgb(231, 219, 255);}
 
 li{
-    font-size:1.25rem; 
-    font-weight:400;}
+    font-size:2.8vh; 
+    font-weight:500;}
 
 h1{
     font-size:6.282722513089006vh; 
     text-align:center;
     font-family:'M PLUS Code Latin', sans-serif; 
-    font-weight:600; }
+    font-weight:700; }
 
 h2{font-size: 3.40vh; 
     font-family: 'M PLUS Code Latin', sans-serif; 
-    font-weight:400;
+    font-weight:600;
 }
 
 h3{font-size:2.8vh; 
     font-family: 'M PLUS Code Latin', sans-serif; 
-    font-weight:400;}
+    font-weight:500;}
+
+h4{font-size:2.5vh; 
+    font-family: 'M PLUS Code Latin', sans-serif; 
+    font-weight:500;
+    text-align:center;}
 
 p{ 
     font-family: 'M PLUS Code Latin', sans-serif; 
-    font-weight:300;
-    font-size:2vh;
+    font-weight:400;
+    font-size:1.8vh;
     min-width:5px;
     }
 
@@ -138,15 +166,50 @@ body{
     margin-bottom:1.2rem;
 }
 
+#aptis{
+    margin-left:1.875rem;
+    margin-top:5rem;
+    padding-right:1.875rem;
+    height:18.75rem;
+}
 
+.miniapti{
+    position:relative;
+    float:inline-start;
+    width:28%;
+    text-align:justify;
+    margin-right: 0.8rem;
+    margin-left:0.8rem;
+}
+
+
+
+.parapti{
+    font-size:1.8vh;
+}
 
 #header{
     padding:1px;
-    padding-top:0px;
-    border-radius: 3px;
     position:relative;
 }
     
+
+#headarea{
+    width:80%;
+    height:5rem;
+    margin:auto;
+    display:flex;
+}
+
+.botonestop{
+    margin:auto;
+    border:1px;
+    display:block;
+    width:auto;
+    padding:30px;
+    border:none;   
+    margin-left:auto;
+}
 
 #main{
     background-color:white;
@@ -154,15 +217,39 @@ body{
     padding:1.5%;
     margin-top:1.563rem;
     border-radius:0.063rem;
-    margin-left:25%;
-    margin-right:25%;
-    
-    
+    margin-left:27%;
+    margin-right:27%;   
+}
 
+#arrow{
+    object-fit:cover;
+    width:30px;
+    padding:10px;
+
+}
+
+#botoncin{
+    display:block;
+    margin-left:auto;
+    border-radius:50%;
+    background-color:rgb(192, 129, 255);
+    border:none;    
+}
+
+#botoncin:hover{
+    display:block;
+    margin-left:auto;
+    border-radius:50%;
+    background-color:rgb(221, 187, 255);
+    border:none;
+    cursor:pointer;
     
 }
-    
+
+
+
 .datosp{
     margin-left:1.875rem;
     padding-right:1.875rem;
+    margin-bottom: 5rem;
     }
