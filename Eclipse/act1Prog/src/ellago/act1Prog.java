@@ -1,5 +1,7 @@
 package ellago;
 
+import java.util.Scanner;
+
 public class act1Prog {
 
 	public static void main(String[] args) {
@@ -173,6 +175,8 @@ public class act1Prog {
 					x=teclado.nextInt();
 					System.out.println("Introduce otro número");
 					y=teclado.nextInt();
+					
+					teclado.close();
 					String multiplo=(x%y==0||y%x==0)?" es múltiplo ":" no es múltiplo ";
 					
 					System.out.printf("El número %s%sde %s",x,multiplo,y);
@@ -189,7 +193,6 @@ public class act1Prog {
 				
 				• Crear una variable m del tipo enumerado y asignarle el mes de marzo. Mostrar por pantalla su valor.
 			
-				import java.util.Scanner;
 				public class operadoresaritmeticos {
 				
 				
@@ -227,6 +230,9 @@ public class act1Prog {
 			num1=teclado.nextInt();
 			System.out.println("Introduce un número");
 			num2=teclado.nextInt();
+			
+			teclado.close();
+			
 			System.out.printf("Se calculará la ecuación %sx + %s = 0",num1,num2);
 			num2=-num2;
 			System.out.printf("\n%sx = %s",num1,num2);
@@ -237,17 +243,112 @@ public class act1Prog {
 			
 		*/
 		}
-		}
-	 		
-		}
-		
+		class Ejercicio8{
 			
+			/*
+			
+
+				8.- Diseña un programa Java que calcule la suma, resta, multiplicación y división de dos números introducidos por teclado. Incorpora también las funciones que permitan realizar la potencia de un número y la raíz cuadrada del otro.
+
+			Ejemplo de salida del programa para x=9, y=3:
+
+			Introducir primer numero: 9
+			Introducir segundo numero: 3
+			x = 9.0 y = 3.0
+			x + y = 12.0
+			x - y = 6.0
+			x * y = 27.0
+			x / y = 3.0
+			x ^ 2 = 81.0
+			√ x = 3.0
+				
+				Scanner teclado= new Scanner(System.in);
+		
+				System.out.printf("Introduce 1 número ");
+				float num1 = teclado.nextInt();
+				System.out.printf("Introduce otro número ");
+				float num2 = teclado.nextInt();
+		
+				System.out.printf("x = %s y = %s",num1,num2);
+				System.out.printf("\nx + y = %s", (num1+num2));
+				System.out.printf("\nx - y = %s", (num1-num2));
+				System.out.printf("\nx * y = %s", (num1*num2));
+				System.out.printf("\nx / y = %s", (num1/num2));
+				System.out.printf("\nIntroduce 1 exponente ");
+				float exp = teclado.nextInt();
+				float potencia= (float) (Math.pow(num1,exp));
+				teclado.close();
+				System.out.printf("\nx ^ 2 = %s", potencia);
+				float raiz=(float)Math.sqrt(num1);
+				System.out.printf("\n√ x = %s", (raiz));
+				
 				
 			
+			
+			*/
+			
+		}
+	 		class Ejercicio9{
+	 			
+	 			/*9.- Diseña un programa Java que solicite un número de 5 dígitos del teclado, separe el número en sus dígitos individuales y los muestre por pantalla. Por ejemplo, si el número es 53123 que muestre:
+
+	 			5 3 1 2 3
+	 		
+	 		Scanner teclado = new Scanner(System.in);
+	 		
+	 		System.out.println("Introduce un número de 5 cifras");
+	 		int numero = teclado.nextInt();
+	 		
+	 		String cinco= String.valueOf(numero);
+	 		
+	 		teclado.close();
+	 		int b=0;
+	 		//método 1
+	 		for(int a=0; a<cinco.length();a++) {
+	 			
+	 			System.out.print(cinco.charAt(a) + " ");
+	 		}
+	 		//método 2
+	 		System.out.print(cinco.charAt(b) + " ");
+	 		b++;
+	 		System.out.print(cinco.charAt(b) + " ");
+	 		b++;
+	 		System.out.print(cinco.charAt(b) + " ");
+	 		b++;
+	 		System.out.print(cinco.charAt(b) + " ");
+	 		b++;
+	 		System.out.print(cinco.charAt(b) + " ");
+	 		b++;
+	 		//método 3
+	 		int nuevo,nuevo1,nuevo2,nuevo3;
+	 		nuevo=numero%10000;
+	 		nuevo=nuevo/1000;
+	 		nuevo1=numero%1000;
+	 		nuevo1=nuevo1/100;
+	 		nuevo2=numero%100;
+	 		nuevo2=nuevo2/10;
+	 		nuevo3=numero%10;
+	 		System.out.print((numero/10000) + " " + nuevo + " " + nuevo1  + " " + nuevo2 + " "  + nuevo3);
+	 		*/
+	 		
+	 		
+	 		
+	 			
+	 			
+	 			
+	 			
+	 			
+	 			
+		}
+		
+	 		class Ejercicio10{
+	 			
+	 		}
+	 		
 		}
 		}
 		
 
 	}
 
-}
+

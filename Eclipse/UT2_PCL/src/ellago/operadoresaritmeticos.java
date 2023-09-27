@@ -16,10 +16,19 @@ public static void main(String[] args) {
 	float l2 = teclado.nextFloat();
 	System.out.printf("Introduce otro número: ");
 	float l3 = teclado.nextFloat();
-		
 	float sp=(l1+l2+l3)/2; //creamos variable con la formula de sp
+	
+	
 
+	if(sp-l1<0||sp-l2<0||sp-l3<0){ //tontería para que se acabe el programa y mande un mensaje de error si el triángulo es físicamente imposible
+		String error="EL TRIÁNGULO ES IMPOSIBLE";
+		System.err.println(error);
+		System.exit(1);
+	}
 	float area=(float)Math.sqrt(sp*(sp-l1)*(sp-l2)*(sp-l3));//creamos variable con la fórmula completa del area
+	
+	
+	
 	System.out.println("sp = "+ sp);
 	System.out.println("area = " + area); 
 	
