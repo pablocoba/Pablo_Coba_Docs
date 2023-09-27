@@ -144,10 +144,11 @@ body{
     
 
 #headarea{
-    width:80%;
+    width:54.8rem;
     height:5rem;
     margin:auto;
     display:flex;
+    justify-content: center;
 }
 
 .botonestop{
@@ -164,9 +165,8 @@ body{
     background-color:white;
     position:relative;
     padding:1.5%;
-    margin-top:1.563rem;
     border-radius:0.063rem;
-    max-width: 46rem;
+    max-width: 51rem;
     margin-right:auto;
     margin-left:auto;
 }
