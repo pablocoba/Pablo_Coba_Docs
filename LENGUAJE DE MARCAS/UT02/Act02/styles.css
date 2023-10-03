@@ -8,7 +8,7 @@ h1{ font-size:60px;
     font-weight:700;
 }
 
-h2{font-size: 34px; 
+h2{font-size: 37px; 
         font-family: 'M PLUS Code Latin', sans-serif; 
         font-weight:600;
 }
@@ -42,9 +42,47 @@ body{
     height:100%;
 }
 
+#botoncin{
+    border-radius:50%;
+    background-color:rgb(192, 129, 255);
+    border:none;    
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+#botoncin:hover{
+    border-radius:50%;
+    background-color:rgb(221, 187, 255);
+    border:none;
+    cursor:pointer;   
+}
+
+.lin{
+    position:relative;
+    display:flex;
+    margin-left:640px;
+    width:50px;
+    height:50px;
+}
+.lin2{
+    display:flex;
+    width:50px;
+    height:50px;
+    margin-left:50px;
+    margin-top:10px;
+    margin-bottom:30px;
+}
+
+#arrow{
+    object-fit:cover;
+    width:30px;
+    padding:10px;
+
+}
+
 table{
     font-family: 'M PLUS Code Latin', sans-serif; 
-    width:70%;
+    width:100%;
     border-collapse: collapse;
     text-align:center;
     
@@ -55,7 +93,7 @@ th{
     font-size:30px; 
 }
 td{
-    font-size:26px;
+    font-size:24px;
     font-weight:400;
     padding:8px;
     border-bottom:1px solid #ab9cca;
@@ -63,10 +101,9 @@ td{
 tr:nth-child(odd) {background-color:#d1bbff;}
 tr:nth-child(even) {background-color:#e7dbff;}
 
-.padretabla{
-    display:inline-block;
-    justify-content: center;
-    display:flex;
+.padretabla{    
+    margin:auto;
+
     height:100%;
 }
 
@@ -76,12 +113,22 @@ tr:nth-child(even) {background-color:#e7dbff;}
 
 }
 
+#head{
+    margin-top:0px;
+    padding-top:30px;
+}
+
 .center_frame{
     height:100%;
     background-color:#fff;
     width:45%;
     margin:auto;
+    padding-bottom:20px;
     height:100%;
+}
+
+.pafoto{
+    width:100%;
 }
 
 .fotosvj{
@@ -153,6 +200,12 @@ tr:nth-child(even) {background-color:#e7dbff;}
     display:block;
     float:inline-start;
     height:100%;
+}
+
+.tabhead{
+    text-align: center;
+    font-size: 30px;
+    font-weight:600;
 }
 
 .lista{
