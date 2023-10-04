@@ -1,4 +1,8 @@
 package ellago;
+/**
+ * 
+ * @author Pablo Coba Lodín
+ */
 import java.util.Scanner;
 public class Ejercicio8 {
 

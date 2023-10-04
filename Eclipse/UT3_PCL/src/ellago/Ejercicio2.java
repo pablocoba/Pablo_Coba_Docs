@@ -1,4 +1,8 @@
 package ellago;
+/**
+ * 
+ * @author Pablo Coba Lodín
+ */
 import java.util.Scanner;
 public class Ejercicio2 {
 
@@ -11,8 +15,12 @@ public class Ejercicio2 {
 		 ****
 		 *****
 		 */
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Introduce un número: ");
+		int x = teclado.nextInt();
 		
-			for(int b=1;b<=5;b++) {
+			System.out.print("\n");
+			for(int b=1;b<=x;b++) {
 				for(int j=1;j<=b;j++) {
 					System.out.print("*");
 					

@@ -1,5 +1,8 @@
 package ellago;
-
+/**
+ * 
+ * @author Pablo Coba Lodín
+ */
 import java.util.Scanner;
 
 public class Ejercicio1 {
@@ -29,7 +32,7 @@ public class Ejercicio1 {
 				System.out.println(b + " es el mayor y " + c + " es el menor");
 			}
 			else {
-				System.out.println(a + " es el mayor " + c + " es el menor ");
+				System.out.println(b + " es el mayor " + c + " es el menor ");
 			}
 		}
 		else if(c>a&c>b){
