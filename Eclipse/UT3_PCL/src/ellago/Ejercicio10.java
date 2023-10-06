@@ -1,13 +1,18 @@
 package ellago;
+/**
+ * 
+ * @author Pablo Coba Lodín
+ * //10.Escribe un programa que calcule el factorial de un número entero leído por teclado.
+ */
 import java.util.Scanner;
 public class Ejercicio10 {
 
 	public static void main(String[] args) {
-		//10.Escribe un programa que calcule el factorial de un número entero leído por teclado.
+
 		Scanner teclado = new Scanner(System.in);
 		System.out.print("Introduce un número: ");
 		int n = teclado.nextInt();
-		teclado.close();
+		teclado.close(); //cerrar teclado
 		
         double factorial = 1;	
 		

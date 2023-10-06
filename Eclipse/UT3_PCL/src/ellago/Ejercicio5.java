@@ -2,12 +2,7 @@ package ellago;
 /**
  * 
  * @author Pablo Coba Lodín
- */
-public class Ejercicio5 {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		/*5.Realiza un programa que muestre por pantalla las tablas de multiplicar 
+ * 5.Realiza un programa que muestre por pantalla las tablas de multiplicar 
 	        del 1 al 10 con el siguiente formato: 
 			Tabla del 1 
 			*********** 
@@ -23,20 +18,26 @@ public class Ejercicio5 {
 			2 x 9 = 18 
 			2 x 10 = 20 
 			.......
-			*/
+			
+ */
+public class Ejercicio5 {
+
+	public static void main(String[] args) {
+		
+		
 		int multiplicador = 1;
 		
-		for(int i=1;i<=10;i++) {
+		for(int i=1;i<=10;i++) { //bucle para repetir cada tabla
 			
 			System.out.println("Tabla del "+i+"\n***********");
 			
 			for(int j=1;j<=10;j++) {
 				
-				System.out.println(multiplicador+" x "+j+" = "+(j*multiplicador));	
+				System.out.println(multiplicador+" x "+j+" = "+(j*multiplicador));	//bucle para poner las tablas como tal
 
 			}
 			System.out.println();
-			multiplicador++;
+			multiplicador++; //este es el número que es multiplicado
 			
 		}
 		

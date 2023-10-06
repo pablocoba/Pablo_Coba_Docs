@@ -2,63 +2,68 @@ package ellago;
 /**
  * 
  * @author Pablo Coba Lodín
+ * 3.Realiza un programa utilizando bucles que muestre la siguiente figura por pantalla:
+		   *
+		  ***
+		 *****
+		*******
+		 *****
+		  ***
+		   *
+		o una pirámide introduciendo la altura y el carácter con el que se muestre.
  */
 import java.util.Scanner;
 public class Ejercicio3 {
-/*3.	Realiza un programa utilizando bucles que muestre la siguiente figura por pantalla:
- 		   *
- 		  ***
- 		 *****
- 		*******
- 		 *****
- 		  ***
- 		   *
-o una pirámide introduciendo la altura y el carácter con el que se muestre.
-*/
+
 	public static void main(String[] args) {
-		//HE HECHO EL DEL ROMBO
-		int esp2 = 3;
-		int esp3= 3;
 		
-		for(int lin=1;lin<=7;lin=lin+2) {
-	
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("pon un numero impar de filas: ");
+		int lindeseadas = teclado.nextInt(); //pedimos filas
+		if(lindeseadas % 2 != 0) { //este bucle es para que sólo funcione si el número introducido es impar, ya que no puede ser par si queremos que salga rombo
+			int lin= (lindeseadas/2)+1;//esto es para que traduzca las líneas que se piden con los valores q necesitarán los bucles
+			System.out.println("pon un símbolo o dígito: ");
+			String sim = teclado.next();//pedimos el tipo de caracter
+			teclado.close();//cerramos teclado
 			
-			for(int esp = esp2;esp>0;esp--) {
-				
-				System.out.print(" ");
-			}
-			for(int ast=1; ast<=lin; ast++) {
+			
+			int esp=lin-1;
+			int ast=1;
+			
+			for(int i=1; i<=lin;i++) {  //bucle para hacer la pirámide
+				for(int k = 0; k<esp;k++) {
+					System.out.print(" ");
+				}
+				for(int j = 0; j<ast;j++) {
+					System.out.print(sim);
+				}
+				System.out.println();
+				esp=esp-1;
+				ast=ast+2;
 		
-				System.out.print("*");
-
 			}
-			esp2--;
+			ast=ast-4;
+			esp=esp+2; //ajustar los valores para que la pirámide invertida se vea correctamente
+			for(int x = 1; x<=lin;x++) { //bucle para la pirámide invertida q forma el rombo
+				
+				for(int z = 0; z<esp; z++) {
+					System.out.print(" ");
+				}
+				for(int y = 0; y<ast;y++) {
+					System.out.print(sim);
+				}
 
-			System.out.println();
-			
-			
+				System.out.println();
+				esp=esp+1;
+				ast=ast-2;
+			}
 		}
-		for(int lin=1;lin<=7;lin=lin+2) {
-			
-			for(int esp = esp3;esp<4;esp++) {
-				
-				System.out.print(" ");
-			}
-			
-			for(int ast=5; ast>=lin; ast--) {
-				
-				System.out.print("*");
-
-			}
-
-			esp3--;
-
-			System.out.println();
+		else {System.err.print("pon un número impar merluzo");} //el mensaje de error
 		
-		}
-	
-			
-		}
+		
 
+
+		
 	}
 
+}

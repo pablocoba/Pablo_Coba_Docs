@@ -2,30 +2,30 @@ package ellago;
 /**
  * 
  * @author Pablo Coba Lodín
- */
-import java.util.Scanner;
-public class Ejercicio2 {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		/*2.Realiza un programa utilizando bucles que muestre la siguiente figura por pantalla: 
+ * 2.Realiza un programa utilizando bucles que muestre la siguiente figura por pantalla: 
 		 *
 		 ** 
 		 ***
 		 ****
 		 *****
 		 */
+
+import java.util.Scanner;
+public class Ejercicio2 {
+
+	public static void main(String[] args) {
+
 		Scanner teclado = new Scanner(System.in);
 		System.out.println("Introduce un número: ");
-		int x = teclado.nextInt();
-		
+		int x = teclado.nextInt(); //pedimos el numero
+		teclado.close(); //cerramos teclado
 			System.out.print("\n");
 			for(int b=1;b<=x;b++) {
-				for(int j=1;j<=b;j++) {
+				for(int j=1;j<=b;j++) {	//bucle para imprimir *
 					System.out.print("*");
 					
 				}
-				System.out.print("\n");
+				System.out.print("\n"); //bucle para imprimir saltos de linea
 
 			}
 		

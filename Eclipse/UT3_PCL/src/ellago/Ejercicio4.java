@@ -2,19 +2,18 @@ package ellago;
 /**
  * 
  * @author Pablo Coba Lodín
- */
-import java.util.Scanner;
-public class Ejercicio4 {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		/*4.	Se desea conocer el lucky number (número de la suerte) de cualquier persona. 
+ * 4.	Se desea conocer el lucky number (número de la suerte) de cualquier persona. 
 		El número de la suerte se consigue reduciendo la fecha de nacimiento a un 
 		número de un solo dígito. Por ejemplo, la fecha de nacimiento de Emma es la 
 		siguiente: 16-08-1973 → 16+8+1973 = 1997 → 1+9+9+7=26 → 2+6 =8. 
 		El número de la suerte de Emma será el 8. 
 		Realiza un programa que calcule el lucky number de cualquier persona.
-		 */
+		 
+ */
+import java.util.Scanner;
+public class Ejercicio4 {
+
+	public static void main(String[] args) {
 		
 		Scanner teclado = new Scanner(System.in);
 		System.out.println("introduce tu día de nacimiento: ");
@@ -26,9 +25,9 @@ public class Ejercicio4 {
 		teclado.close(); //pedimos datos
 		
 		int suma1 = (dia+mes+ano); //sumamos todos
-	
 		
-		int real4 = suma1%10;	//dividimos los dígitos en variables (las "real")
+		
+		int real4 = suma1%10;	//dividimos los dígitos en variables mediante divisiones y restos
 		int dig3 = suma1%100;
 		int real3= dig3/10;
 		int dig2 = suma1%1000;
