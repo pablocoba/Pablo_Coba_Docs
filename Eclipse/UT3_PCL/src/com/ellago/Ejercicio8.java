@@ -1,4 +1,4 @@
-package ellago;
+package com.ellago;
 /**
  * 
  * @author Pablo Coba Lodín
@@ -17,27 +17,58 @@ public class Ejercicio8 {
 		int combi=1234; //combinación default
 		Scanner teclado = new Scanner(System.in);
 		
-		int numint;
+		int numint = 3;
+		boolean x =true; //boolean para terminar el while
 		
-		for(numint = 3;numint>=0;numint--) { //bucle para introducir contraseña
+		//Esto es parecido pero con un for, no prestar atención
+		
+		/*do {//bucle de arranque
+			for(numint = 3;numint>=0 & x;numint--) { //bucle para introducir contraseña
+				System.out.println("INTRODUCE LA CONTRASEÑA:\n");
+				int intento = teclado.nextInt();
+				
+				if(intento==combi) {
+					System.out.println("\nCONTRASEÑA CORRECTA");
+					x=false; //finaliza el bucle
+				}
+				else {
+					System.out.println("\nCONTRASEÑA INCORRECTA, "+numint+" INTENTOS RESTANTES\n"); //lo de los intentos restantes sé que no hacía falta
+				}
+			}
+			if(numint<=0) {
+				System.err.print("NO SE ABRIRÁ LA CAJA"); 
+				x=false;//finaliza el bucle
+				}
+		}while(x);*/
+		
+		do {
 			System.out.println("INTRODUCE LA CONTRASEÑA:\n");
 			int intento = teclado.nextInt();
-			
-			if(intento==combi) {
+			if(intento==combi) { //si el intento es igual que la combinación se acaba el bucle
 				System.out.println("\nCONTRASEÑA CORRECTA");
-				break; //finaliza el bucle
+				x=false; //finaliza el bucle
 			}
 			else {
+				//si el intento es diferente a la combinación,
+				//sigue el bucle
 				System.out.println("\nCONTRASEÑA INCORRECTA, "+numint+" INTENTOS RESTANTES\n"); //lo de los intentos restantes sé que no hacía falta
-				
 			}
-		}
+			if(numint<=0) {
+				System.err.print("NO SE ABRIRÁ LA CAJA"); 
+				x=false;//finaliza el bucle
+				}
+			numint--;//baja el contador para cada vuelta del bucle
+			
+		}while(x & numint>=0);
+		
+		
+		teclado.close();//COMENTAR ESTO SI QUIERE QUE FUNCIONE LA SIGUIENTE PARTE 
 		
 		//los switches molan
 		///////////////////////////////////////
 		///////////////////////////////////////
 		//todo esto es for fun
-		
+		/*
 		System.out.println("\nDESEA CAMBIAR LA CONTRASEÑA?");
 		System.out.println("INTRODUZCA 1 PARA SÍ");
 		System.out.println("INTRODUZCA 0 PARA NO\n");
@@ -74,7 +105,7 @@ public class Ejercicio8 {
 			teclado.close(); //cerramos teclado
 			break;
 			
-		}
+		}*/
 		
 	}
 

@@ -1,4 +1,4 @@
-package ellago;
+package com.ellago;
 /**
  * 
  * @author Pablo Coba Lodín
@@ -11,10 +11,10 @@ package ellago;
 		 
  */
 import java.util.Scanner;
+
 public class Ejercicio4 {
 
 	public static void main(String[] args) {
-		
 		Scanner teclado = new Scanner(System.in);
 		System.out.println("introduce tu día de nacimiento: ");
 		int dia = teclado.nextInt();
@@ -23,27 +23,30 @@ public class Ejercicio4 {
 		System.out.println("introduce tu año de nacimiento: ");
 		int ano = teclado.nextInt();
 		teclado.close(); //pedimos datos
-		
+
 		int suma1 = (dia+mes+ano); //sumamos todos
+		int acum;
+		int num = 0;
 		
-		
-		int real4 = suma1%10;	//dividimos los dígitos en variables mediante divisiones y restos
-		int dig3 = suma1%100;
-		int real3= dig3/10;
-		int dig2 = suma1%1000;
-		int real2= dig2/100;
-		int dig1 = suma1%10000;
-		int real1= dig1/1000;
 
 		
-		int suma2 = real1+real2+real3+real4; //sumamos los dígitos
+		do {
+			acum=0;
+			String cade=String.valueOf(suma1);
+			for(int i = 0; i < cade.length();i++) {
+				num = Character.getNumericValue(cade.charAt(i));
+				acum = acum + num;
+			}
+			
+			
+			suma1 = acum;
+			
+		}while(acum > 9);
+		
 
 		
-		int final2=suma2%10; //sacamos los dígitos en variables de nuevo
-		int final1=suma2/10;
-		System.out.println("Tu lucky number es el "+(final2+final1)); //mostramos por pantalla la suma directamente
-		
-		
+		System.out.println("Tu lucky number es el "+acum);
+	
 	}
 
 }

@@ -1,4 +1,4 @@
-package ellago;
+package com.ellago;
 /**
  * 
  * @author Pablo Coba Lodín
@@ -27,14 +27,14 @@ public class Ejercicio3 {
 			teclado.close();//cerramos teclado
 			
 			
-			int esp=lin-1;
+			int esp=lin-1; //ajustamos número de espacios (líneas menos 1)
 			int ast=1;
 			
 			for(int i=1; i<=lin;i++) {  //bucle para hacer la pirámide
-				for(int k = 0; k<esp;k++) {
+				for(int k = 0; k<esp;k++) {//bucle para espacios
 					System.out.print(" ");
 				}
-				for(int j = 0; j<ast;j++) {
+				for(int j = 0; j<ast;j++) { //bucle para simbolos
 					System.out.print(sim);
 				}
 				System.out.println();

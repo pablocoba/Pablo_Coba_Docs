@@ -1,4 +1,4 @@
-package ellago;
+package com.ellago;
 /**
  * 
  * @author Pablo Coba Lodín
@@ -31,9 +31,9 @@ public class Ejercicio5 {
 			
 			System.out.println("Tabla del "+i+"\n***********");
 			
-			for(int j=1;j<=10;j++) {
+			for(int j=1;j<=10;j++) { //bucle para poner las tablas como tal
 				
-				System.out.println(multiplicador+" x "+j+" = "+(j*multiplicador));	//bucle para poner las tablas como tal
+				System.out.println(multiplicador+" x "+j+" = "+(j*multiplicador));	
 
 			}
 			System.out.println();

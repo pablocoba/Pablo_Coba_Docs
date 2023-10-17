@@ -1,0 +1,12 @@
+body {margin:5; padding:0; font: bold 14px; background-color:grey}
+h2 {color: #000; padding: 0px 0px 0px 15 px;}
+h1{text-align:center;}
+header{background-color:orange; padding:20px;margin:20px}
+.menu_h{background-color:orange; margin-bottom:20px;}
+.menu_h li {display:inline;  padding:40px; font-size:18px;}
+.menu_h ul{margin-bottom:10px;}
+.menu_h a {float:left; display: block; margin:3px; padding:5px; text-decoration:none;
+color:#000; border-top-right-radius:8px; background-color: #f1dca7;}
+.menu_h a:hover {color:#FFF; font-size:1.2em; background-color:#999; text-decoration:underline;}
+nav{background-color:orange; padding:20px;margin:20px;height:50px;}
+section{float:left; background-color:orange; padding:20px;margin:20px; height:500px; width: 700px;}

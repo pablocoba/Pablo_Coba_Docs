@@ -1,4 +1,4 @@
-package ellago;
+package com.ellago;
 /**
  * 
  * @author Pablo Coba Lodín
@@ -21,8 +21,8 @@ public class Ejercicio9 {
 		int temp1 = 0;
 		int temp2 = 1;
 		
-		for(int i=0;i<=n;i++) {
-			System.out.print(fib+", "); //empezamos todo imprimiendo para que salga el 0 inicial.
+		for(int i=0;i<=(n-1);i++) {
+			System.out.print(fib+" "); //empezamos todo imprimiendo para que salga el 0 inicial.
 			fib=temp1+temp2; //sumamos las temporales y luego ya las cambiamos.
 			temp2=temp1; //trasladamos el ultimo num de fibonacci a una variable temporal para quedarnos con ella para la siguiente suma
 			temp1=fib;	//lo mismo con la otra variable temporal.

@@ -1,4 +1,4 @@
-package ellago;
+package com.ellago;
 /**
  * 
  * @author Pablo Coba Lodín
@@ -31,7 +31,7 @@ public class Ejercicio1 {
 				System.out.println(b + " es el mayor y " + c + " es el menor");
 			}
 			else {
-				System.out.println(b + " es el mayor " + c + " es el menor ");
+				System.out.println(b + " es el mayor " + a + " es el menor ");
 			}
 		}
 		else if(c>a&c>b){	//este if es en el caso de que el tercero sea el mayor

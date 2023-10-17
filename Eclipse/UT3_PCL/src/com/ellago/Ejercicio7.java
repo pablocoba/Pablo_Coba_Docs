@@ -1,4 +1,4 @@
-package ellago;
+package com.ellago;
 /**
  * 
  * @author Pablo Coba Lodín
@@ -15,7 +15,6 @@ public class Ejercicio7 {
 			if(i%5!=0) { //filtramos los números de 5
 				System.out.print(i+", ");
 			}
-			
 		}
 	}
 

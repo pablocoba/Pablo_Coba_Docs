@@ -1,4 +1,4 @@
-package ellago;
+package com.ellago;
 /**
  * 
  * @author Pablo Coba Lodín
@@ -17,10 +17,10 @@ public class Ejercicio2 {
 
 		Scanner teclado = new Scanner(System.in);
 		System.out.println("Introduce un número: ");
-		int x = teclado.nextInt(); //pedimos el numero
+		int x = teclado.nextInt(); //pedimos el numero de líneas
 		teclado.close(); //cerramos teclado
 			System.out.print("\n");
-			for(int b=1;b<=x;b++) {
+			for(int b=1;b<=x;b++) { //bucle para nº de líneas
 				for(int j=1;j<=b;j++) {	//bucle para imprimir *
 					System.out.print("*");
 					

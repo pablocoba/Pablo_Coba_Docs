@@ -1,4 +1,4 @@
-package ellago;
+package com.ellago;
 /**
  * 
  * @author Pablo Coba Lodín
@@ -14,12 +14,12 @@ public class Ejercicio10 {
 		int n = teclado.nextInt();
 		teclado.close(); //cerrar teclado
 		
-        double factorial = 1;	
+        long factorial = 1;	
 		
 		for(int i = 1; i<=n;i++) {
-			factorial = factorial * i;	 //factorial x i que va subiendo y se va multiplicando por sí mismo		
+			factorial = factorial * i;	 //factorial * i que va subiendo y se va multiplicando por sí mismo		
 		}
-		  System.out.printf("%d! = %0.f %n", n, factorial);
+		  System.out.printf("%d! = %s %n", n, factorial); //imprimimos y tal todo bien
 		
 	}
 
