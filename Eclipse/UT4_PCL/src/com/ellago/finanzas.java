@@ -15,69 +15,83 @@ import java.util.Scanner;
 
 public class finanzas { //creamos la clase pública finanzas 
 
-	private double dolar; //le asignamos atributos euro y dolar
-	private double euro;
-	private double cambiodolar; //estas variables serán para almacenar los cambios de divisa
-	private double cambioeuro;
-	
-	public finanzas(double dolar, double euro) {//le hacemos un constructor que pida dolares y euros
-		cambiodolar = this.cambiodolar;
-		cambioeuro = this.cambioeuro;
-		this.dolar = dolar;						//los referenciamos con los atributos de la clase
-		this.euro = euro;
-		
-		cambioeuro = euro/1.054394;	//aquí hacemos el cambio de divisa
-		cambiodolar = dolar*1.054394;
+	public double cambio;
+	public finanzas() {cambio = 1.36;}
+	public finanzas(double c) {cambio = c;}
+	public double eurosToDol(double eur) {
+		return eur*cambio;
 	}
-	
-	
-	
-	public double getCambioEur() { //método get para cambio de euro a dolar
-		return cambioeuro;
+	public double dolToEur(double dol) {
+		return dol/cambio;
 	}
-	public double getCambioDolar() { //método get para cambio de dolar a euro
-		return cambiodolar;
-	}
-	
-	
-	public double getDolar() { //método para comprobar los dólares que tenemos
-		return dolar;
-	}
-	
-	public double getEur() { //método para comprobar los dólares que tenemos
-		return euro;
-	}
-	
-	
+
 	public static void main(String[] args) {
+
 		
-		double a= 0; double b=0;
-		Scanner teclado = new Scanner(System.in); //pedimos los euros y dolares por teclado
-		System.out.println("0.-cambio dol-eur\n1.-cambio eur-dol");
-		int sel = teclado.nextInt();
-		switch(sel) {
-		case 0: System.out.println("dolars porfa\n");
-		a = (double)teclado.nextInt();
-		finanzas f1 = new finanzas(a,b); //inicializamos una nueva finanza
-		System.out.println("\n"+f1.getDolar()+" dólares serán "+f1.getCambioDolar()+" euros");
-		break;
+		boolean encendido = true;
+		Scanner teclado = new Scanner(System.in);
 		
-		case 1:System.out.println("euros porfa\n");
-		b = (double)teclado.nextInt();
-		finanzas f2 = new finanzas(a,b); //inicializamos una nueva finanza
-		System.out.println("\n"+f2.getEur()+" euros serán "+f2.getCambioEur()+" dólares");
-		break;
+		
+		while(encendido=true) {
+			finanzas f1 = new finanzas();
+
+
+			System.out.println("\nIntroduce un número para cambiar: ");
+			double num = (double)teclado.nextInt();
+			System.out.println("\nSeleccione si es un cambio euro-dol o dol-euro: ");
+			System.out.println("\nPulse 0: euro-dolar.\nPulse 1: dol-euro\nPulse 2: salir");
+			int a = teclado.nextInt();
+			
+			switch(a) {
+			case 0:
+				System.out.println(num +"€ = " + f1.eurosToDol(num)+"$");
+				System.out.println("\n¿Deseas cambiar el cambio de la moneda?\nPulse 0: No.\nPulse 1: Sí\n");
+				int b = teclado.nextInt();
+				
+				switch(b) {
+				case 0:
+					encendido = false;
+					break;
+					
+				case 1:
+					System.out.println("\nIntroduce el nuevo cambio: ");
+					double cnuevo = (double)teclado.nextInt();
+					finanzas f2 = new finanzas(cnuevo);
+					
+					System.out.println(num+"€ = "+f2.eurosToDol(num)+"$");
+					
+					break;
+					
+				}
+				
+				break;
+			case 1:
+				System.out.println(num +"$ = " + f1.dolToEur(num)+"€");
+				System.out.println("\n¿Deseas cambiar el cambio de la moneda?\nPulse 0: No.\nPulse 1: Sí\n");
+				int x = teclado.nextInt();
+				switch(x) {
+				case 0:
+					encendido = false;
+					
+				case 1:
+					System.out.println("\nIntroduce el nuevo cambio: ");
+					double cnuevo = (double)teclado.nextInt();
+					finanzas f2 = new finanzas(cnuevo);
+					System.out.println(num+"$ = "+f2.dolToEur(num)+"€");
+					break;
+					
+				}
+				
+				
+				
+				break;
+			case 2:
+				System.exit(0);
+			}
 		}
-		
-		
+		}
 
-		
-		
-		
-		
-
-		
 
 	}
 
-}
+
