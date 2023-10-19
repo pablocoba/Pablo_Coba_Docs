@@ -5,8 +5,36 @@ package com.ellago;
  * 2.Realiza una clase minumero que proporcione el doble, triple y cuádruple de un número 
  * proporcionado en su constructor (realiza un método para doble, otro para triple y otro para cuádruple). 
  * Haz que la clase tenga un método main y comprueba los distintos métodos.
+ 
+       _ _,---._
+   ,-','       `-.___
+  /-;'               `._
+ /\/          ._   _,'o \
+( /\       _,--'\,','"`. )
+ |\      ,'o     \'    //\
+ |      \        /   ,--'""`-.
+ :       \_    _/ ,-'         `-._
+  \        `--'  /                )
+   `.  \`._    ,'     ________,','
+     .--`     ,'  ,--` __\___,;'
+      \`.,-- ,' ,`_)--'  /`.,'
+       \( ;  | | )      (`-/
+         `--'| |)       |-/
+           | | |        | |
+           | | |,.,-.   | |_
+           | `./ /   )---`  )
+          _|  /    ,',   ,-'
+ -hrr-   ,'|_(    /-<._,' |--,
+         |    `--'---.     \/ \
+         |          / \    /\  \
+       ,-^---._     |  \  /  \  \
+    ,-'        \----'   \/    \--`.
+   /            \              \   \
  */
+
+
 import java.util.Scanner;
+
 public class minumero {
 	
 	public int num;

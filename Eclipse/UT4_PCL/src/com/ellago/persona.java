@@ -1,8 +1,50 @@
 package com.ellago;
 
 import java.time.LocalDate;
+import java.util.Scanner;
+/**
+ * @author Pablo Coba Lodín
+ * 5.	Se realizará una clase nombrada Persona con las siguientes especificaciones:
+•	Dos atributos (nombre y fecha_nacimiento) con visibilidad privada de tipo String.
+•	Dos constructores (visibilidad pública):
+•	Uno que sólo recibirá el nombre que inicializará el atributo nombre.
+•	Otro que recibirá dos parámetros nombre y fecha_nacimiento para incializar los atributos.
+•	Métodos (visibilidad pública) getters y setters para cada atributo.
+•	Un método (visibilidad pública) que devolverá la edad(un entero) de la Persona basándose en su fecha de nacimiento nombrada como getEdad(). 
+•	Se tendrá en cuenta si la persona ha o no cumplido ya los años. 
+•	Si la fecha_nacimiento es null, el método devolverá un -1
+Se podrá obtener la fecha actual a partir de la clase LocalDate aplicando el método now(). Ejemplo LocalDate fecha_actual=LocalDate.now() que pertenece al paquete java.time
+•	El método principal que probará la clase creada siguiendo los siguientes pasos:
+•	Se pedirá por teclado un Nombre.
+•	Se creará el objeto tipo Persona con ese nombre.
+•	Si la fecha de nacimiento es null, se solicitará por teclado una y se actualizará el atributo del objeto.
+•	Al final, se escribirá por pantalla los siguientes mensajes:
+•	“La persona es:” seguido del nombre
+•	“Su fecha de nacimiento es” seguido de la fecha de nacimiento “y su edad es” seguido de la edad.
+•	Para el acceso a los atributos se utilizarán los métodos correspondientes.
 
-import java.util.Date;
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⣤⣤⣤⣤⣶⣦⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⡿⠛⠉⠙⠛⠛⠛⠛⠻⢿⣿⣷⣤⡀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⠋⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠈⢻⣿⣿⡄⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⣸⣿⡏⠀⠀⠀⣠⣶⣾⣿⣿⣿⠿⠿⠿⢿⣿⣿⣿⣄⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⣿⣿⠁⠀⠀⢰⣿⣿⣯⠁⠀⠀⠀⠀⠀⠀⠀⠈⠙⢿⣷⡄⠀ 
+⠀⠀⣀⣤⣴⣶⣶⣿⡟⠀⠀⠀⢸⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣷⠀ 
+⠀⢰⣿⡟⠋⠉⣹⣿⡇⠀⠀⠀⠘⣿⣿⣿⣿⣷⣦⣤⣤⣤⣶⣶⣶⣶⣿⣿⣿⠀ 
+⠀⢸⣿⡇⠀⠀⣿⣿⡇⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀ 
+⠀⣸⣿⡇⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠉⠻⠿⣿⣿⣿⣿⡿⠿⠿⠛⢻⣿⡇⠀⠀ 
+⠀⣿⣿⠁⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣧⠀⠀ 
+⠀⣿⣿⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠀⠀ 
+⠀⣿⣿⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠀⠀ 
+⠀⢿⣿⡆⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⠀ 
+⠀⠸⣿⣧⡀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠃⠀⠀ 
+⠀⠀⠛⢿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⣰⣿⣿⣷⣶⣶⣶⣶⠶⠀⢠⣿⣿⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⣿⣿⡇⠀⣽⣿⡏⠁⠀⠀⢸⣿⡇⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⣿⣿⡇⠀⢹⣿⡆⠀⠀⠀⣸⣿⠇⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⢿⣿⣦⣄⣀⣠⣴⣿⣿⠁⠀⠈⠻⣿⣿⣿⣿⡿⠏⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠈⠛⠻⠿⠿⠿⠿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+
+ */
+
 public class persona {
 	private String nombre;
 	private String fechaN;
@@ -13,16 +55,16 @@ public class persona {
 	public static LocalDate fecha_actual = LocalDate.now();
 	//declaramos la fecha actual para luego
 	
-	public persona(String nombre) {
+	public persona(String nombre) {//constructor solo con nombre
 		this.nombre = nombre;
 	}
-	public persona(String nombre, String fechaN) {
+	public persona(String nombre, String fechaN) {//constructor con ambos fecha y nombre
 		this.nombre = nombre;
 		this.fechaN = fechaN;
 	}
 
 
-	public String getNombre() {
+	public String getNombre() { //respectivs gets y sets
 		return nombre;
 	}
 	public String getFechaN() {
@@ -32,17 +74,17 @@ public class persona {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public void setFechaN(String fechaN) { //debe ser introducida en formato dd/mm/aaaa
+	public void setFechaN(String fechaN) { //debe ser introducida en formato YYYY-MM-DD
 		this.fechaN = fechaN;
 	}
-	public int edad(int ano, int mes, int dia) { //pedimos el dia mes y año de nacimiento, que se calculan en el main
+	public int getEdad(int ano, int mes, int dia) { //pedimos el dia mes y año de nacimiento, que se calculan en el main
 		if(ano == 0 ||mes == 0||dia == 0) {
 			return -1;
 		}
-		else {
+		else { //estos ifs comprueban si los años, meses y días son mayores o no a la actual, lo que determina si tienes una edad mayor o menor
 			int edadano = fecha_actual.getYear() - ano;
 			
-			if(mes>=fecha_actual.getMonthValue()) { //si el mes es menor a la fecha actual, no tendrá 
+			if(mes>=fecha_actual.getMonthValue()) { 
 
 				if(dia<=fecha_actual.getDayOfMonth()) {
 					return edadano;
@@ -58,23 +100,41 @@ public class persona {
 		
 	}
 	
-/*	public int edad(String fechaN) {
-		
-		return;
-
-	}*/
 	public static void main(String[] args) {
-
-		persona pablo = new persona("Pablo", "20102007");
-
-		//esto es para dividir la fecha en enteros de mes, dia y año
-		int c = Integer.valueOf(pablo.fechaN);
-		int ano = c%10000;
-		int mes = (c%1000000)/10000;
-		int dia = c/1000000;
 		
-		System.out.println(fecha_actual);
-		System.out.println(pablo.edad(ano,mes,dia));
+		//pedimos datos
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Introduce tu nombre");
+		String nombre = teclado.next();
+		System.out.println("Introduce tu fecha de nacimiento en formato \"YYYY-MM-DD\" con guiones incluidos");
+		String fechaN = teclado.next();
+		
+		//inicializamos objeto nuevo
+		persona persona = new persona(nombre, fechaN);
+		
+		//recogemos la fecha de nacimiento en caracteres
+		char l0 =  persona.fechaN.charAt(0);
+		char l1 =  persona.fechaN.charAt(1);
+		char l2 =  persona.fechaN.charAt(2);
+		char l3 =  persona.fechaN.charAt(3);
+		char l5 =  persona.fechaN.charAt(5);
+		char l6 =  persona.fechaN.charAt(6);
+		char l8 =  persona.fechaN.charAt(8);
+		char l9 =  persona.fechaN.charAt(9);
+
+		//pasamos los caracteres a un string
+		String nuevaF=""+l0+l1+l2+l3+l5+l6+l8+l9;
+		
+		//y del string a un entero
+		int c = Integer.parseInt(nuevaF);
+		
+		//dividimos para sacar los datos año fecha y mes
+		int ano = c/10000;
+		int mes = (c/100)%100;
+		int dia = c%100;
+		
+		//imprimimos lo que queremos
+		System.out.println("La persona es "+persona.nombre+", su fecha de nacimiento es "+persona.fechaN+", tiene "+persona.getEdad(ano, mes, dia)+" años.");
 
 		
 	}
