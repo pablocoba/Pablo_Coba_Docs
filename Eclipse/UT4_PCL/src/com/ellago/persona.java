@@ -46,11 +46,10 @@ Se podr√° obtener la fecha actual a partir de la clase LocalDate aplicando el m√
  */
 
 public class persona {
+	//creamos atributos
 	private String nombre;
 	private String fechaN;
-	public int diaReal = 20;
-	public int mesReal = 10;
-	public int anoReal = 2023;
+
 	
 	public static LocalDate fecha_actual = LocalDate.now();
 	//declaramos la fecha actual para luego
@@ -112,7 +111,7 @@ public class persona {
 		//inicializamos objeto nuevo
 		persona persona = new persona(nombre, fechaN);
 		
-		//recogemos la fecha de nacimiento en caracteres
+		//recogemos la fecha de nacimiento en caracteres (sin incluir los guiones)
 		char l0 =  persona.fechaN.charAt(0);
 		char l1 =  persona.fechaN.charAt(1);
 		char l2 =  persona.fechaN.charAt(2);

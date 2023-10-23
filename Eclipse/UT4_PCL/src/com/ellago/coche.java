@@ -28,24 +28,24 @@ package com.ellago;
  */
 
 public class coche {
-	
-	public String marca;
-	public String clase;
+	//creamos variables
+	private String marca;
+	private String clase;
 	//primer constuctor
 	public coche(String marca, String clase) {
 		this.marca = marca;
 		this.clase = clase;
 	}
-	//segundo constructor
+	//segundo constructor vacío
 	public coche() {}
 	
 	public static void main(String[] args) {
-
+		//creamos un objeto con cada constructor
 		coche rx7 = new coche("mazda","deportivo");
 		coche gtr = new coche();
 		
 		//se ve que los constructores funcionan (el segundo debe no tener nada)
-		System.out.println(""+rx7.marca+ " "+rx7.clase + " "+gtr);
+		System.out.println("coche 1: "+rx7.marca+ " "+rx7.clase + " || coche 2 (no hay datos): "+gtr);
 	}
 
 }

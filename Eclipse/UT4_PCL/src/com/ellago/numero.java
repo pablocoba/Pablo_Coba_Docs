@@ -67,37 +67,73 @@ package com.ellago;
  */
 import java.util.Scanner;
 public class numero {
+	//creamos variable n
+	private int n;
 	
-	public int n;
+	///creamos constructor
 	public numero() {n = 0;}
-	public int shown() {
-		return n;
-	}
-	public int addn(int anadido) {
-		return (n + anadido);
+	
+	//creamos get de n basicamente
+	public void shown() {
+		System.out.println("El valor de n es; " + n);
 	}
 	
-	public int resn(int anadido) {
-		return (n-anadido);
+	//creamos metodo de suma
+	public void addn(int anadido) {
+		n+=anadido;
 	}
+	//creamos metodo de resta
+	public void resn(int anadido) {
+		n-=anadido;
+	}
+	//craemos gets
 	public int getValor() {
 		return n;
 	}
+	//metodo para duplicar y almacenar el nuevo valor de n
 	public int getDoble() {
-		return (2*n);
+		n=n*2;
+		return (n);
 	}
+	//metodo para triplicar y almacenar el nuevo valor de n
 	public int getTriple() {
-		return (3*n);
+		n=n*3;
+		return (n);
 	}
+	
+	//metodo para introducir un nuevo valor para n y enseñarlo por pantalla
 	public void setNumero() {
 		Scanner teclado = new Scanner(System.in);
 		System.out.println("Introduce nuevo valor: ");
 		n = teclado.nextInt();
-		teclado.close();
+		System.out.println("Valor del numero: "+n);
 	}
 	public static void main(String[] args) {
+		//creamos objeto
+		numero n = new numero();
+		//probamos metodo set por teclado
+		n.setNumero();
 		
-
+		Scanner teclado = new Scanner(System.in);
+		//probamos metodo add por teclado
+		System.out.println("Introduce nuevo valor para sumar: ");
+		int suma = teclado.nextInt();
+		n.addn(suma);
+		
+		System.out.println("Valor del numero tras la suma: "+n.getValor());
+		
+		//probamos metodo resta por teclado
+		System.out.println("Introduce nuevo valor para restar: ");
+		int resta = teclado.nextInt();
+		teclado.close();
+		n.resn(resta);
+		
+		System.out.println("Valor del numero tras la resta: "+n.getValor());
+		System.out.println("Valor del numero duplicado: "+n.getDoble());
+		//aquí se va a triplicar el número ya duplicado
+		System.out.println("Valor del numero triplicado: "+n.getTriple());
+		
+		
 	}
 
 }

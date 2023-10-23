@@ -19,11 +19,11 @@ mysql> CREATE TABLE OFICINAS(
     -> LINEADIRECCION1 VARCHAR(50) NOT NULL,
     -> LINEADIRECCION2 VARCHAR(50)
     -> );
-Query OK, 0 rows affected (0.06 sec)
+Query OK, 0 rows affected (0.01 sec)
 
 mysql> 
 mysql> DROP TABLE IF EXISTS EMPLEADOS;
-Query OK, 0 rows affected, 1 warning (0.01 sec)
+Query OK, 0 rows affected, 1 warning (0.00 sec)
 
 mysql> CREATE TABLE EMPLEADOS(
     -> CODIGOEMPLEADO INT AUTO_INCREMENT PRIMARY KEY,
@@ -38,7 +38,7 @@ mysql> CREATE TABLE EMPLEADOS(
     -> FOREIGN KEY (CODIGOOFICINA) REFERENCES OFICINAS(CODIGOOFICINA) ON UPDATE CASCADE,
     -> FOREIGN KEY (CODIGOJEFE) REFERENCES EMPLEADOS(CODIGOEMPLEADO) ON DELETE SET NULL ON UPDATE CASCADE
     -> );
-Query OK, 0 rows affected (0.04 sec)
+Query OK, 0 rows affected (0.01 sec)
 
 mysql> 
 mysql> 
@@ -63,7 +63,7 @@ mysql> CREATE TABLE CLIENTES(
     -> LIMITECREDITO DECIMAL (15,2),
     -> FOREIGN KEY (CODIGOEMPLEADOREPVENTAS) REFERENCES EMPLEADOS(CODIGOEMPLEADO)
     -> );
-Query OK, 0 rows affected (0.03 sec)
+Query OK, 0 rows affected (0.01 sec)
 
 mysql> 
 mysql> DROP TABLE IF EXISTS PEDIDOS;
@@ -124,7 +124,7 @@ mysql> CREATE TABLE DETALLEPEDIDOS(
     -> FOREIGN KEY (CODIGOPRODUCTO) REFERENCES PRODUCTOS(CODIGOPRODUCTO)ON UPDATE CASCADE,
     -> PRIMARY KEY (CODIGOPEDIDO,CODIGOPRODUCTO)
     -> );
-Query OK, 0 rows affected (0.02 sec)
+Query OK, 0 rows affected (0.01 sec)
 
 mysql> 
 mysql> DROP TABLE IF EXISTS PAGOS;
@@ -144,11 +144,11 @@ Query OK, 0 rows affected (0.01 sec)
 mysql> 
 mysql> /*TABLA CLIENTES ALTERS*/
 mysql> ALTER TABLE CLIENTES CHANGE TELEFONO TELEFONOMOVIL VARCHAR(15) NOT NULL;
-Query OK, 0 rows affected (0.04 sec)
+Query OK, 0 rows affected (0.01 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 
 mysql> ALTER TABLE CLIENTES ADD COLUMN TELEFONOFIJO VARCHAR(15) NOT NULL AFTER TELEFONOMOVIL;
-Query OK, 0 rows affected (0.01 sec)
+Query OK, 0 rows affected (0.04 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 
 mysql> ALTER TABLE CLIENTES CHANGE LINEADIRECCION1 DIRECCION1 VARCHAR(50) NOT NULL;
@@ -167,8 +167,9 @@ mysql> ALTER TABLE CLIENTES ADD CONSTRAINT CONST_PAIS_CLIENT CHECK (PAIS IN ("US
 Query OK, 0 rows affected (0.03 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 
-mysql> DROP INDEX IF EXISTS idx_TELEFONOMOVIL;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF EXISTS idx_TELEFONOMOVIL' at line 1
+mysql> /*DARÁ ERROR SI EL INDICE NO EXISTE PORQUE SEMANTICAMENTE NO EXISTE*/
+mysql> DROP INDEX idx_TELEFONOMOVIL ON CLIENTES; 
+ERROR 1091 (42000): Can't DROP 'idx_TELEFONOMOVIL'; check that column/key exists
 mysql> CREATE INDEX idx_TELEFONOMOVIL ON CLIENTES (TELEFONOMOVIL);
 Query OK, 0 rows affected (0.02 sec)
 Records: 0  Duplicates: 0  Warnings: 0
@@ -198,15 +199,15 @@ Query OK, 0 rows affected (0.00 sec)
 mysql> 
 mysql> /*TABLA OFICINAS*/
 mysql> ALTER TABLE OFICINAS CHANGE LINEADIRECCION1 DIRECCION1 VARCHAR(50) NOT NULL;
-Query OK, 0 rows affected (0.01 sec)
+Query OK, 0 rows affected (0.02 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 
 mysql> ALTER TABLE OFICINAS CHANGE LINEADIRECCION2 DIRECCION2 VARCHAR(50) NOT NULL;
-Query OK, 0 rows affected (0.02 sec)
+Query OK, 0 rows affected (0.05 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 
 mysql> ALTER TABLE OFICINAS ADD CONSTRAINT CONST_PAIS_OFI CHECK (PAIS IN ("SPAIN","USA","UNITED KINGDOM","FRANCE","AUSTRALIA","JAPAN"));
-Query OK, 0 rows affected (0.02 sec)
+Query OK, 0 rows affected (0.03 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 
 mysql> DROP VIEW IF EXISTS V_OFICINAS;
@@ -241,4 +242,5 @@ Query OK, 0 rows affected (0.00 sec)
 mysql> grant select on PCL_jardineria.* to usuarioPCL;
 Query OK, 0 rows affected (0.00 sec)
 
+mysql> 
 mysql> notee;

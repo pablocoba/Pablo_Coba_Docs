@@ -38,7 +38,7 @@ import java.util.Scanner;
 
 public class finanzas { //creamos la clase pública finanzas 
 
-	public double cambio;
+	private double cambio;
 	public finanzas() {cambio = 1.36;}
 	public finanzas(double c) {cambio = c;}
 	public double eurosToDol(double eur) {

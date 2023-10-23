@@ -80,7 +80,7 @@ public class millasAMetros {
 		System.out.println("Dame unas millitas!");
 		double millas = teclado.nextDouble();
 		
-		System.out.println(millas+" millas son "+ conversion.millasAMetros(millas)+" metros ó " + conversion.millasAKilometros(millas) + " kilómetros");
+		System.out.printf("%s millas son %.2f metros ó %.2f kilómetros",millas,conversion.millasAMetros(millas),conversion.millasAKilometros(millas));
 
 	}
 }
