@@ -1,0 +1,77 @@
+body{
+    font-size: .9vw;
+    font-family:'Playfair display',serif;
+    font-weight: 400;
+    margin-left:0;
+    margin-right:0;
+
+}
+div{
+    display:block;
+}
+header{
+    width:100%;
+    float:left;
+}
+h1{
+    color:#a77daf;
+    font-style: italic;
+    font-weight: 800;
+    font-size:1.3vw;
+    margin-left:.5em;
+    float:left;
+}
+main{
+    display:block;
+    float:left;
+    margin-top:1em;
+}
+h2{
+
+    margin-left:0;
+    float:left;
+    font-size:1.5vw;
+    color:white;
+}
+.imain{
+    display:flex;
+    flex-wrap:wrap;
+    flex: 0 0 100%;
+}
+.cont{
+    position:relative;
+}
+.nav {
+    margin-left: 15em;
+}
+.nav a {
+    float:left; 
+    margin-left:1.4em; 
+    padding:.1em; 
+    text-decoration:none;
+    color:#000; 
+    transition:0.3s;
+}
+.nav a:hover{
+
+    color:#a77daf;
+}
+.foto{
+    width:100%;
+    height:24em;
+    object-fit:cover; 
+    object-position: 100% 10%;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+
+}
+.captions{
+    background:none;
+    position:absolute;
+}
+.logotipo img{
+    margin-left:1em;
+    float:left;
+    height:auto;
+    width:3.3%;
+}

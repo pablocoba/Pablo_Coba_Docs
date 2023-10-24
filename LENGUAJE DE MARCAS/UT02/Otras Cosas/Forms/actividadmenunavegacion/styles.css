@@ -3,7 +3,7 @@ h2 {color: #000; padding: 0px 0px 0px 15 px;}
 h1{text-align:center;}
 
 .menu_h{background-color:orange; margin-bottom:20px;}
-.menu_h li {display:inline;  padding:40px; font-size:30px;}
+.menu_h li {display:inline; padding:40px; font-size:30px;}
 .menu_h ul{margin-bottom:10px;}
 .menu_h a {
     float:left; 
@@ -13,7 +13,7 @@ h1{text-align:center;}
     text-decoration:none;
     color:#000; 
     border-top-right-radius:8px; 
-    background-color: #f1dca7;
+    background-color: #272520;
 }
 .menu_h a:hover {color:#FFF; font-size:1.2em; background-color:#e0e0e0; text-decoration:underline;}
 header{background-color:orange;
@@ -89,6 +89,13 @@ footer{
 }
 .foot{
     padding-top:1%;
-
     margin:0;
+}
+.hola{
+float:left;
+margin-left:3%;
+
+}
+.soundcloud{
+    font-size: 10px; color: #000000;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;
 }
