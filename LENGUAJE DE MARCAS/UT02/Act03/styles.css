@@ -1,5 +1,5 @@
 body{
-    font-size: .9vw;
+    font-size: 20px;
     font-family:'Playfair display',serif;
     font-weight: 400;
     margin-left:0;
@@ -8,12 +8,20 @@ body{
     color:#242424;
     
 }
+hr{
+    width:80%;
+    border-top:1px #242424;
+    
+}
 footer{
     margin-top: 1.25rem;
     padding-top: 1.25rem;
     overflow:hidden;
     box-shadow: 2px 2px 11px 0 rgba(0,0,0,.4);
     background-color:#d1b9d6;
+    margin-left:auto;
+    margin-right:auto;
+
 }
 a { text-decoration: none;}
 a:visited { text-decoration: none; }
@@ -28,18 +36,17 @@ div{
 }
 header{
     width:100%;
-    float:left;
 }
 
 li{
-    font-size:.75vw;
+    font-size:18.5px;
 }
 
 h1{
     color:#a77daf;
     font-style: italic;
     font-weight: 800;
-    font-size:1.3vw;
+    font-size:26px;
     margin-left:.5em;
     float:left;
 
@@ -57,7 +64,7 @@ main{
     
 }
 h2{
-    font-size:1.9vw;
+    font-size:30px;
     font-weight:600;
     margin-block-start: 0.83em;
     margin-block-end: 0.83em;
@@ -85,14 +92,14 @@ h2{
 }
 
 .col p {
-    font-size:.75vw;
+    font-size:18.5px;
 }
 .col ul{
     list-style: none;
     padding-left:0;
 }
 .col li{
-    font-size:.75vw;
+    font-size:18.5px;
     display:list-item;
     padding-bottom: 0.5em;
 }
@@ -105,6 +112,66 @@ h2{
 
     color:#a77daf;
 }
+.flex-container{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    justify-content: center;
+    background-color:#d1b9d6;
+    margin:3em;
+    max-width:900px;
+    padding-right:2em;
+    margin-right:auto;
+    margin-left:auto;
+}
+.form{
+    padding:3em;   
+    min-width:400px;
+    flex:1;
+    text-align:center;
+}
+.form_top{
+    font-size: 16px;
+    font-weight: 600;
+}
+.form_input{
+    font-size: 20px;
+    font-family:'Playfair display',serif;
+    font-weight: 400;
+    border:none;
+    border-bottom:3px solid #a77daf;
+    margin:.5em;
+    padding-top:.5em;
+    padding-bottom:.5em;
+    padding-left:0;
+    padding-right:0;
+    width:100%;
+    background:transparent;
+}
+.form input[type="submit"]{
+    background-color:#a77daf;
+    font-weight:600;
+    border-bottom:none;
+}
+.form input:hover[type="submit"]{
+    background-color:#b588be;   
+}
+.form input:active[type="submit"]{
+    background:linear-gradient(to bottom, #c493ce, #a77daf); 
+}
+.form input:focus[type="submit"]{
+    background:linear-gradient(to bottom, #c493ce, #a77daf); 
+}
+.form_input:focus{
+    background:linear-gradient(to bottom, #d1b9d6, #a77daf);
+    outline:none;
+    
+}
+.form textarea{
+    min-height: 15em;
+    resize:none;
+}
+
 .footcont{
     width: 100%;
     padding-right: 15px;
@@ -142,9 +209,10 @@ h2{
 }
 .cont{
     position:relative;
+    overflow:hidden;
 }
 .nav {
-    margin-left: 20em;
+    margin-left: 17vw;
 
 }
 .navg{
@@ -155,6 +223,7 @@ h2{
     color:#242424;
     transition:0.3s;
 }
+.navg:hover{font-size:22px;}
 
 .nav a:hover{
     color:#a77daf;
@@ -170,7 +239,7 @@ h2{
     padding-top:.3em;    
 }
 .foto{
-    width:110.2em;
+    width:99.2vw;
     height:23.3em;
     object-fit:cover; 
     object-position: 100% 10%;
@@ -183,7 +252,7 @@ h2{
 }
 
 .foto2{
-    width:110.2em;
+    width:106.3em;
     height:23.3em;
     object-fit:cover; 
     object-position: 100% 52%;
@@ -220,7 +289,7 @@ h2{
     font-family:'Playfair display',serif;
     cursor: pointer;
     transition:0.2s;
-    font-size:1em;
+    font-size:16px;
 }
 .ramosbut2{
     background-color:#a77daf;
@@ -235,7 +304,7 @@ h2{
     font-family:'Playfair display', serif;
     cursor: pointer;
     transition:0.2s;
-    font-size:1em;
+    font-size:16px;
     margin-right:auto;
     margin-left:auto;
     display:block;
@@ -264,9 +333,10 @@ h2{
 }
 .logotipo img{
     margin-left:3em;
+    margin-right:.8em;
     float:left;
     height:auto;
-    width:3.3%;
+    width:75px;
     margin-bottom:.5em;
 }
 .mse{
@@ -296,6 +366,7 @@ h2{
     padding-bottom:1em;
     justify-content: center;
 }
+
 .bbse{
     width: 100%;
     margin-right: auto;
@@ -316,6 +387,7 @@ h2{
 
 }
 
+
 .rfs{
     display: flex;
     flex-wrap: wrap;
@@ -326,6 +398,10 @@ h2{
 }
 .rfs img{
     max-width:80%;
+    transition:0.3s;
+}
+.rfs img:hover{
+    max-width:85%;
 }
 .rfs p{
     text-align:center;
@@ -337,11 +413,38 @@ h2{
     color:#a77daf;
     text-decoration:none;
 }
-
+section{
+    overflow:hidden;
+}
 .mainsect p{
     margin-left:0.83em;
     margin-right:0.83em;
     margin:1.3em;
-    font-size: .8vw;
+    font-size: 19px;
+}
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:19px;
+
+}
+.container p{
+    margin-top:0;
 }
 
+.wasap{
+    display:flex;
+    margin-left:70em;
+    margin-right:.65em;
+    width:1.3em;
+    height:1.3em;
+}
+.insta{
+    display:flex;
+    margin:0;
+    width:1.3em;
+    height:1.3em;
+}
