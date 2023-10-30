@@ -203,13 +203,13 @@ h2{
     text-transform: uppercase;  
 }
 .imain{
+    
     display:flex;
     flex-wrap:wrap;
     flex: 0 0 100%;
 }
 .cont{
     position:relative;
-    overflow:hidden;
 }
 .nav {
     margin-left: 17vw;
@@ -243,8 +243,6 @@ h2{
     height:23.3em;
     object-fit:cover; 
     object-position: 100% 10%;
-    overflow-clip-margin: content-box;
-    overflow: clip;
     border-style: none;
     vertical-align: middle;
     margin-bottom:1em;
@@ -256,8 +254,6 @@ h2{
     height:23.3em;
     object-fit:cover; 
     object-position: 100% 52%;
-    overflow-clip-margin: content-box;
-    overflow: clip;
     border-style: none;
     vertical-align: middle;
     margin-bottom:1em;
@@ -413,9 +409,6 @@ h2{
     color:#a77daf;
     text-decoration:none;
 }
-section{
-    overflow:hidden;
-}
 .mainsect p{
     margin-left:0.83em;
     margin-right:0.83em;
@@ -429,7 +422,6 @@ section{
     margin-left: auto;
     margin-right: auto;
     font-size:19px;
-
 }
 .container p{
     margin-top:0;
