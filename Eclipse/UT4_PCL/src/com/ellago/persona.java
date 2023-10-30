@@ -150,7 +150,7 @@ public class persona {
 
 		//imprimimos lo que queremos
 		System.out.println("La persona es "+persona.nombre+", su fecha de nacimiento es "+persona.fechaN+", tiene "+persona.getEdad()+" años.");
-
+		teclado.close();
 		
 	}
 

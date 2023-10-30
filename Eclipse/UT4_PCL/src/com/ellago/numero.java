@@ -133,7 +133,7 @@ public class numero {
 		//aquí se va a triplicar el número ya duplicado
 		System.out.println("Valor del numero triplicado: "+n.getTriple());
 		
-		
+		teclado.close();
 	}
 
 }

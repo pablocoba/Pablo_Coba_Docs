@@ -90,7 +90,7 @@ public class minumero {
 		}
 		while(salir==false);
 		
-		
+		key.close();
 	}
 
 }
