@@ -49,7 +49,6 @@ public class persona {
 	//creamos atributos
 	private String nombre;
 	private String fechaN;
-
 	
 	public static LocalDate fecha_actual = LocalDate.now();
 	//declaramos la fecha actual para luego
@@ -57,16 +56,19 @@ public class persona {
 	public persona(String nombre) {//constructor solo con nombre
 		this.nombre = nombre;
 	}
+	
 	public persona(String nombre, String fechaN) {//constructor con ambos fecha y nombre
 		this.nombre = nombre;
 		this.fechaN = fechaN;
 	}
 
 
-	public String getNombre() { //respectivs gets y sets
+	public String getNombre() { //respectivos gets y sets
 		return nombre;
 	}
 	public String getFechaN() {
+		
+		
 		return fechaN;
 	}
 	
@@ -76,7 +78,15 @@ public class persona {
 	public void setFechaN(String fechaN) { //debe ser introducida en formato YYYY-MM-DD
 		this.fechaN = fechaN;
 	}
-	public int getEdad(int ano, int mes, int dia) { //pedimos el dia mes y año de nacimiento, que se calculan en el main
+	public int getEdad() {
+		int ano, mes,dia;
+		
+		//recogemos la fecha de nacimiento en Strings y las pasamos a ints(sin incluir los guiones)
+		ano = Integer.parseInt(fechaN.substring(0,4));
+		mes = Integer.parseInt(fechaN.substring(5,7));
+		dia = Integer.parseInt(fechaN.substring(8,10));
+		
+		
 		if(ano == 0 ||mes == 0||dia == 0) {
 			return -1;
 		}
@@ -110,8 +120,11 @@ public class persona {
 		
 		//inicializamos objeto nuevo
 		persona persona = new persona(nombre, fechaN);
+	
 		
-		//recogemos la fecha de nacimiento en caracteres (sin incluir los guiones)
+		/**
+		 * 
+		 * ------------------ALTERNATIVA CON CHARATS-------------------
 		char l0 =  persona.fechaN.charAt(0);
 		char l1 =  persona.fechaN.charAt(1);
 		char l2 =  persona.fechaN.charAt(2);
@@ -131,9 +144,12 @@ public class persona {
 		int ano = c/10000;
 		int mes = (c/100)%100;
 		int dia = c%100;
-		
+		---------------------------------------------------------------
+		*/
+
+
 		//imprimimos lo que queremos
-		System.out.println("La persona es "+persona.nombre+", su fecha de nacimiento es "+persona.fechaN+", tiene "+persona.getEdad(ano, mes, dia)+" años.");
+		System.out.println("La persona es "+persona.nombre+", su fecha de nacimiento es "+persona.fechaN+", tiene "+persona.getEdad()+" años.");
 
 		
 	}
