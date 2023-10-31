@@ -1,3 +1,19 @@
+::-webkit-scrollbar {
+  width: 7px;
+
+} 
+::-webkit-scrollbar-track {
+  background: #2d2d2e; 
+}
+::-webkit-scrollbar-thumb {
+  background: #999; 
+  height:100px;
+  border-radius:10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
 body{
     background:#2d2d2e;
     font-family: 'Hanken Grotesk', sans-serif;
@@ -5,17 +21,44 @@ body{
     padding:0;
     box-sizing:border-box;
 }
-h1{
+h2{
     margin:0;
     font-weight:800;
     font-size:40px;
     color:rgb(233, 233, 233);
 }
+h1{
+  margin:0;
+  font-weight:800;
+  font-size:80px;
+  color:rgb(233, 233, 233);
+}
+p{
+  margin:0;
+  font-weight:400;
+  font-size:16px;
+  color:rgb(233, 233, 233);
+}
+.descripcionpablo{
+  text-align:end;
+}
+.nombre{
+  position:relative;
+  width:100%;
+  max-width:1000px;
+  justify-content:center;
+  align-items:center;
+  display:flex;
+  flex-flow:column nowrap;
+
+}
 .topnav{
-    position:relative;
+    position:sticky;
+    top:0;
     display:flex;
     align-content:center;
     flex:1;
+    background:#2d2d2e;
 }
 
 .pablocoba{
@@ -50,4 +93,17 @@ h1{
         to {
           visibility: hidden;
         }
+}
+.coba{
+  animation:color-change 15s infinite;
+}
+@keyframes color-change {
+  0%{color:red;}
+  14% { color: orange; }
+  30%{color:yellow;}
+  45%{color:green;}
+  66.6%{color:blue;}
+  83.3%{color:purple;}
+  100% { color: red; }
+  
 }
