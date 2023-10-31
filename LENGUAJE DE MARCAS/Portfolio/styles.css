@@ -1,0 +1,53 @@
+body{
+    background:#2d2d2e;
+    font-family: 'Hanken Grotesk', sans-serif;
+    margin:2% 3.5% 2% 3.5%;
+    padding:0;
+    box-sizing:border-box;
+}
+h1{
+    margin:0;
+    font-weight:800;
+    font-size:40px;
+    color:rgb(233, 233, 233);
+}
+.topnav{
+    position:relative;
+    display:flex;
+    align-content:center;
+    flex:1;
+}
+
+.pablocoba{
+    position:relative;
+    display:block;
+    flex-grow:10;
+}
+.flexboxnav{
+    flex-grow:3;
+    position:relative;
+    display:flex;
+    justify-content:space-evenly;
+    flex-flow: row wrap;
+    align-content:center;
+}
+.flexboxnav li{
+    list-style: none;
+    color:rgb(233, 233, 233);
+    font-size:20px;
+}
+
+.blinkingdot{
+    animation: blink-animation 1s steps(5, start) infinite;
+        -webkit-animation: blink-animation 1s steps(5, start) infinite;
+      }
+      @keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+      @-webkit-keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+}
