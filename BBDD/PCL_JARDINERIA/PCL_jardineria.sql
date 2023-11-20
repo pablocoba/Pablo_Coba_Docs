@@ -143,3 +143,35 @@ DROP USER IF EXISTS usuarioPCL;
 CREATE USER usuarioPCL IDENTIFIED BY "macarrones";
 grant select on PCL_jardineria.* to usuarioPCL;
 
+
+
+select * from alumno where id = 1;
+select * from alumno where teléfono = 692735409;
+select * from alumno where es_repetidor = "sí";
+select * from alumno where es_repetidor = "no";
+select * from alumno where fecha_nacimiento < '1993/01/01';
+select * from alumno where fecha_nacimiento > '1994/01/01';
+select * from alumno where fecha_nacimiento > '1994/01/01' and es_repetidor = "no";
+select * from alumno where fecha_nacimiento between '1998-01-01' and '1998-12-31';
+/*otra forma*/
+select * from alumno where year(fecha_nacimiento) = 1998;
+
+select * from alumno where fecha_nacimiento not between '1998-01-01' and '1998-12-31';
+/*otra forma*/
+select * from alumno where year(fecha_nacimiento) != 1998;
+
+/* % es igual a 'cualquier cosa' */
+/* _ es igual a 1 espacio con cualquier cosa' */
+select * from alumno where apellido1 like '%chez';
+select * from alumno where apellido1 like 'S%';
+select * from alumno where apellido1 like '______z';
+select * from alumno where apellido1 like '_a%'; 
+/*NO ES IGUAL A */
+select * from alumno where apellido1 like '%a%'; 
+/* esta devuelve todas las que contengan la a, en cualquier posicion */
+
+select * from alumno where char_length(apellido1) = 9; /*cuenta chars*/
+select * from alumno where length(apellido1) = 9; /*cuenta bytes*/
+
+select * from alumno where apellido1 like "abc%" escape "%";
+select * from alumno where apellido1 like "abc\%"; /* viene a ser lo nmismo */
