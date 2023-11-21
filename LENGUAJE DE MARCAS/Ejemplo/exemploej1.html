@@ -3,9 +3,21 @@
   <head><!--la cabecera de la página(la pestaña por lo general)-->
     <title>tonto el q lo lea</title><!--<title> es lo que sale en la pestaña de la página-->
     <link rel="stylesheet" href="stylesheet.css"><!--referencia a la hoja de estilos-->
+      <script src="scripts.js"></script>
+  
   </head>
   <body><!--para modificar la página en sí, el cuerpo-->
-
+    <button onclick="alert(product(100,2))">
+      holaa
+    </button>
+    <button onclick="displayDate()">The time is?</button> 
+    <button style="display:block; padding:20px; margin:20px;" onclick="dimeloquetal()">The time is?</button> 
+    <p id="demo"></p>
+    <button onclick="aparecer()">aparece!!!</button>
+    <div id="divi" style="visibility:hidden;">
+      <img styles="max-width:400px" src="tini.jpg">
+      <h2>monito guay</h2>
+    </div>
     <h1 id="inicio" style="color:darkslategray; font-size:40px; text-align:center; ">My first heading</h1>
     <h2 style="background-color:rgb(143, 143, 143); text-align:center; ">hola holita</h2>
     <a href="#poesia">ir a la poesía poesiosa</a><!--usando href podemos ir al ID referido con #-->
@@ -41,7 +53,7 @@
         but the browser<br> <!--así se pondría para meter cambios de línea-->
         ignores it.
         </p>
-      <hr> <!--esto hace una línea horrible-->
+      <hr style=""> <!--esto hace una línea horrible-->
       <br><!--esto hace un salto de página-->
       <p>
         This paragraph
@@ -60,7 +72,7 @@
         Oh, bring back my Bonnie to me.
       </pre>
       <q>Holis</q><!--para quotations cortas-->
-      <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p><!--para abreviaciones que aparecen si hovereas el ratón-->
+      <p>The <abbr style="text-decoration: none;" title="World Health Organization">WHO</abbr> was founded in 1948.</p><!--para abreviaciones que aparecen si hovereas el ratón-->
       <address>
         Written by John Doe.<br>
         Visit us at:<br>
