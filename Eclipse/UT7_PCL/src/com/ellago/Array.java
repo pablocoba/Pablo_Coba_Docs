@@ -284,14 +284,20 @@ public class Array {
 		
 	}
 	
-	public static void ordenarIntArray(int[] arrayInt) {
+	/**
+	 * Ordena de menor a mayor un array de ints
+	 * @param arrayInt array del que se desea cambiar
+	 * @return array ordenado
+	 */
+	
+	public static int[] ordenarIntArray(int[] arrayInt) {
 		int temporal = 0;
 
-		//primer bucle para recorrer todo el array
-		for(int i = 0; i<arrayInt.length;i++) {
-				//segundo bucle para recorrer el array menos el número de vueltas
+		//primer bucle para recorrer todo el array menos 1
+		for(int i = 0; i<arrayInt.length-1;i++) {
+				//segundo bucle para recorrer el array menos 1
 				//del primero menos 1
-			for(int j=0;j<arrayInt.length-i-1;j++) {
+			for(int j=0;j<arrayInt.length-1;j++) {
 				
 				if(arrayInt[j+1] < arrayInt[j]) {
 					//asignamos a la temporal el siguiente valor
@@ -307,31 +313,215 @@ public class Array {
 			
 		}
 		
-		for (int i = 0; i < arrayInt.length; i++) {
-			System.out.print(arrayInt[i]+" ");
+		return arrayInt;
 		}
-	}
 	
-	public static void ordenarIntString(String[] arrayString) {
+	
+	/**
+	 * Ordena de menor a mayor un array de strings
+	 * @param arrayString array del que se desea cambiar
+	 * @return array ordenado
+	 */
+	
+	public static String[] ordenarStringArray(String[] arrayString) {
 		String temporal = "";
-		for(int i = 0; i<arrayString.length;i++) {
+		for(int i = 0; i < arrayString.length-1; i++) {
 				
-			for(int j=0;j<arrayString.length-i-1;j++) {
-				//FALTA PONER QUE SE COMPARE EL ÚLTIMO DÍGITO DE LOS STRINGS
-				if(arrayString[j+1].compareTo(arrayString[j])==-1 ) {
+			for(int j=0; j < arrayString.length-1; j++) {
+
+				if(arrayString[j+1].charAt(4) < arrayString[j].charAt(4)) {
 					temporal = arrayString[j+1];
-					arrayString[j+1]=arrayString[j];
-					arrayString[j]=temporal;
+					arrayString[j+1] = arrayString[j];
+					arrayString[j] = temporal;
 				}
-			
+				
 			}			
 			
 		}
 		
-		for (int i = 0; i < arrayString.length; i++) {
-			System.out.print(arrayString[i]+" ");
-		}
+		return arrayString;
+
 	}
+	
+	/**
+	 * Busca un entero en un array de Ints mediante busqueda dicotómica
+	 * @param arrayInt array en el que se busca
+	 * @param buscado numero buscado
+	 * @return la posicion del array en la que se encuentra
+	 */
+	
+	public static int buscarInt(int[] arrayInt, int buscado) {
+		
+		int inicio = 0;
+		int fin = arrayInt.length -1;
+		
+		while(inicio<=fin) {
+			int centro = (inicio+fin)/2;
+			if(arrayInt[centro]<buscado) {
+				inicio = centro + 1;
+			}
+			else if (arrayInt[centro]>buscado) {
+				fin = centro-1;
+			}
+			else {
+				return centro;
+			}
+			
+		}
+		return -1;
+	}
+	
+	/**
+	 * Busca un String en un array de Strings mediante busqueda dicotómica
+	 * @param arrayString array en el que se busca
+	 * @param buscado numero buscado
+	 * @return la posicion del array en la que se encuentra
+	 */
+	
+	public static int buscarString(String[] arrayString, String buscado) {
+		
+		int inicio = 0;
+		int fin = arrayString.length -1;
+		
+		while(inicio<=fin) {
+			int centro = (inicio+fin)/2;
+			if(arrayString[centro].compareTo(buscado)<0) {
+				inicio = centro + 1;
+			}
+			else if (arrayString[centro].compareTo(buscado)>0) {
+				fin = centro-1;
+			}
+			else {
+				return centro;
+			}
+			
+		}
+		return -1;
+	}
+	
+	/**
+	 * Crea un array de Personas
+	 * @param longitud será la cantidad de personas que creará
+	 * @return Array de Personas
+	 */
+	
+	
+	public static Persona[] crearArrayPersona(int longitud) {
+		
+		Persona[] arrayPersona = new Persona[longitud];			
+		
+		for(int i = 0; i < longitud; i++) {
+			char rndchar = (char)((int)Math.floor(Math.random()*(90-65+1)+65));
+			int rndint = (int) (Math.random()*(200-1)+1);
+			
+			int edad = (int) (Math.random()*(95-18) + 18);
+			String nombre = "" + rndchar + rndint;
+			arrayPersona[i] = new Persona(nombre, edad);
+		}
+		
+		return arrayPersona;
+		
+	}
+	
+	/**
+	 * Muestra un array de Personas
+	 * @param arrayPersona el array de Personas que queremos mostrar
+	 * @return un Syso del array
+	 */
+	
+	
+	public static void mostrarArrayPersona(Persona[] arrayPersona) {
+		
+		for(int i = 0; i<arrayPersona.length; i++) {
+			System.out.println("Persona "+ i + ":\nNombre: " + arrayPersona[i].getNombre() + "\nEdad: " + arrayPersona[i].getEdad());
+			System.out.println();
+		}
+		
+	}
+	
+	//MAL HECHO
+	
+	/**
+	 * MAL HECHO (sin usar la interfaz comparable) Muestra un array de Personas
+	 * @param arrayPersona el array de Personas que queremos ordenar
+	 * @return el array ordenado
+	 */
+	
+	public static Persona[] ordenarArrayPersona(Persona[] arrayPersona) {
+		int temporal = 0;
+		for(int i = 0; i < arrayPersona.length-1; i++) {
+				
+			for(int j=0; j < arrayPersona.length-1; j++) {
+
+				if(arrayPersona[j+1].getEdad() < arrayPersona[j].getEdad()) {
+					temporal = arrayPersona[j+1].getEdad();
+					arrayPersona[j+1].setEdad(arrayPersona[j].getEdad()) ;
+					arrayPersona[j].setEdad(temporal);
+				}
+				
+			}			
+			
+		}
+		
+		return arrayPersona;
+	}
+	
+	//BIEN HECHO
+	
+	/**
+	 * Bien hecho (usando la interfaz comparable) Ordena un array de Personas
+	 * @param arrayPersona el array de Personas que queremos mostrar
+	 * @return el array ordenado
+	 */
+	
+	public static Persona[] ordenarArrayPersona2(Persona[] arrayPersona) {
+		int temporal = 0;
+		for(int i = 0; i < arrayPersona.length-1; i++) {
+			
+			for(int j=0; j < arrayPersona.length-1; j++) {
+
+					Arrays.sort(arrayPersona);		
+				
+			}		
+		}
+	
+		return arrayPersona;
+	}
+	
+	
+	/*ESTOS ESTÁN FATAL
+	public static int[][] crearMatrizInt(int x, int y){
+		int[][] matrizInt = new int[x][y];
+				
+		for (int i = 0; i < matrizInt.length; i++) {
+			
+			int rndInt1 = (int)(Math.random()*(120-20)+20);
+			int rndInt2 = (int)(Math.random()*(120-20)+20);
+			for(int j = 0; j<matrizInt.length; j++) {
+				matrizInt[i][j] = rndInt1;
+				matrizInt[j][i] = rndInt2;
+			}			
+			
+		}
+		
+		return matrizInt;
+	}
+	
+	public static void mostrarMatrizInt(int[][]matrizInt) {
+		
+		for(int i = 0; i<matrizInt;i++) {
+			
+			System.out.println("columna " + i + ": ");
+			for(int j = 0; j<matrizInt.length;i++) {
+				
+				System.out.println("fila " + j + ": ");
+				System.out.print(matrizInt[i][j] + "\n");
+			}
+			
+		}
+		
+	}
+	*/
 	
 }
 
