@@ -9,8 +9,6 @@ import java.util.Iterator;
 
 public class Array {
 
-
-
 	/**
 	 * Crea un array con numeros enteros aleatorios del 1 al 10
 	 * @param longitud longitud del array
@@ -21,7 +19,7 @@ public class Array {
 		
 		int[] arrayInt = new int[longitud];
 		
-		for(int i=0;i<arrayInt.length;i++) {
+		for(int i=0;i<longitud;i++) {
 			arrayInt[i]= (int) (Math.random()*10);
 		}
 			
@@ -42,7 +40,7 @@ public class Array {
 
 		for(int i = 0; i<longitud; i++) {
 			
-			arrayString[i]="Dato" + (int)(Math.random()*10);
+			arrayString[i]= "Dato" + (int)(Math.random()*10);
 			
 		}
 		
@@ -219,13 +217,20 @@ public class Array {
 	
 	public static int[] unirArraysInt(int[] arrayInt1, int[] arrayInt2) {
 		
-		int[] newArray = new int[arrayInt1.length];
+		int longitud = arrayInt1.length + arrayInt2.length;
 		
-		for (int i = 0; i < arrayInt2.length; i++) {
-			newArray[i] = arrayInt1[i]+arrayInt2[i];
+		int[] nuevo = new int[longitud];
+		
+		for (int i = 0; i < arrayInt1.length; i++) {
+			
+			nuevo[i] = arrayInt1[i];
+			
 		}
+		for(int i = 0; i<arrayInt2.length;i++) {
+			nuevo[i+arrayInt1.length]=arrayInt2[i];
+		}				
 		
-		return newArray;
+		return nuevo;
 		
 	}
 	
@@ -466,8 +471,6 @@ public class Array {
 		return arrayPersona;
 	}
 	
-	//BIEN HECHO
-	
 	/**
 	 * Bien hecho (usando la interfaz comparable) Ordena un array de Personas
 	 * @param arrayPersona el array de Personas que queremos mostrar
@@ -488,40 +491,105 @@ public class Array {
 		return arrayPersona;
 	}
 	
-	
-	/*ESTOS ESTÁN FATAL
+        /**
+	 * crea una matriz de enteros
+	 * @param x Filas
+         * @param y Columnas
+	 * @return matriz de enteros
+	 */
+        
 	public static int[][] crearMatrizInt(int x, int y){
+		
 		int[][] matrizInt = new int[x][y];
-				
-		for (int i = 0; i < matrizInt.length; i++) {
+		
+		for(int i = 0; i < x; i++) {
 			
-			int rndInt1 = (int)(Math.random()*(120-20)+20);
-			int rndInt2 = (int)(Math.random()*(120-20)+20);
-			for(int j = 0; j<matrizInt.length; j++) {
-				matrizInt[i][j] = rndInt1;
-				matrizInt[j][i] = rndInt2;
-			}			
+			for(int j = 0; j < y; j++) {
+				
+				matrizInt[i][j] = (int)(Math.random()*(120-20)+20);
+				
+			}
 			
 		}
 		
 		return matrizInt;
-	}
-	
-	public static void mostrarMatrizInt(int[][]matrizInt) {
 		
-		for(int i = 0; i<matrizInt;i++) {
+	}
+        
+        /**
+	 * crea una matriz de Strings
+	 * @param x Filas
+         * @param y Columnas
+	 * @return matriz de Strings
+	 */	
+        
+	public static String[][] crearMatrizString(int x, int y){
+		
+            String[][] matrizString = new String[x][y];
+            
+
+            char rndchar = (char)((int)Math.floor(Math.random()*(90-65+1)+65));
+            
+
+            
+		for(int i = 0; i < x; i++) {
+
+			for (int j = 0; j < y; j++) {
+                            
+                            int rnd = (int)(Math.random()*(100-1)+1);
+                            char rndchar2 = (char)((int)(Math.random()*(90-65)+65));	
+                            matrizString[i][j] = "" +  rnd + rndchar2;
+                            
+			}
 			
-			System.out.println("columna " + i + ": ");
-			for(int j = 0; j<matrizInt.length;i++) {
+		}
+		
+                return matrizString;
+                
+	}
+        
+        /**
+	 * muestra una matriz de enteros
+	 * @param matrizInt matriz a mostrar
+	 * @return Syso de la matriz
+	 */	
+        
+        public static void mostrarMatrizInt(int[][] matrizInt) {
+		
+		for(int i = 0; i < matrizInt.length; i++) {
+			
+			for(int j = 0; j < matrizInt.length; j++) {
 				
-				System.out.println("fila " + j + ": ");
-				System.out.print(matrizInt[i][j] + "\n");
+				System.out.print(matrizInt[i][j] + " ");
+				
 			}
 			
 		}
 		
 	}
-	*/
+        
+        /**
+	 * muestra una matriz de Strings
+	 * @param matrizString matriz a mostrar
+	 * @return Syso de la matriz
+	 */	        
+        
+       public static void mostrarMatrizString(String[][] matrizString) {
+		
+		for(int i = 0; i < matrizString.length; i++) {
+			
+			for(int j = 0; j < matrizString.length; j++) {
+				
+				System.out.print(matrizString[i][j] + " ");
+				
+			}
+			
+		}
+		
+	}
+	
+		
+	
 	
 }
 

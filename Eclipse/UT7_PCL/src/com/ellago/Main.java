@@ -7,15 +7,23 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		int[] arrayInt = Array.crearArrayInt(10);
+		int[] arrayInt = Array.crearArrayInt(10);       
 		int[] arrayInt2 = Array.crearArrayInt(10);
-		String[] arrayString = Array.crearArrayString(10);
+		String[] mcdonalds = Array.crearArrayString(10);
 		Persona[] arrayPersona = Array.crearArrayPersona(10);
+		int[][] matrizInt = Array.crearMatrizInt(3,3);
+		
+		int x = Frecursivas.potencia(5,4);
+		System.out.println(x);
+		
+		
+		/*System.out.println(Frecursivas.factorial(5));
+		for (int i = 0; i < 10; i++) {
+			System.out.println(Frecursivas.fibonacci(i));
+		}*/
 
-		
-		
-		/*Array.mostrarArrayInt(Array.crearArrayInt(5));
-		Array.mostrarArrayString(Array.crearArrayString(5));*/
+
+		/*Array.mostrarArrayString(Array.crearArrayString(5));*/
 		
 		/*Array.mostrarArrayInt(arrayInt);
 		System.out.println(Array.buscarArrayInt(arrayInt,8));
@@ -83,6 +91,8 @@ public class Main {
 		Array.mostrarArrayPersona(arrayPersona);
 		Array.ordenarArrayPersona2(arrayPersona);
 		*/
+		
+		
 		
 	}
 
