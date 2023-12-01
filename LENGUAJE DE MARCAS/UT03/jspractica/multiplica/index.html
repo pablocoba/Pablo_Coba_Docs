@@ -10,10 +10,8 @@
         <meta lang="es">
     </head>
     <body>
-        <button onclick="multiplicar()">Multiplicar x * y</button>
         <button onclick="mayor()">Ver cuál es mayor</button>
         <button onclick="encabezado()">Encabezado</button>
-        <p id="boton"></p>
         <h1 id="he"></h1>
         <table id="uno">
             <tr>
@@ -35,6 +33,33 @@
         <button onclick="bgcolor('green')">green</button>
         <button onclick="bgcolor('blue')">blue</button>
         <button onclick="bgcolor('red')">red</button>
+
+        <section class="calculator">   
+            <div class="numCont">
+                <div class="calculator__display"><span id="res">hola</span></div>
+                <div class="calculator__keys">
+                    <button onclick="multiplicar()" class="key--operator" data-action="subtract" >-</button>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button class="key--operator" data-action="multiply">*</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button class="key--operator" data-action="divide">/</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button class="key--operator" data-action="add">+</button>
+                    <button class="key--equal" data-action="calculate">=</button>
+                    <button id="" class="num">0</button>
+                    <button data-action="clear">C</button>
+                </div>
+
+            </div>
+
+        </section>
+        <p id="boton"></p>
     </body>
 
 </html>

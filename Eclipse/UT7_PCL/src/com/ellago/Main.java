@@ -16,6 +16,7 @@ public class Main {
 		int x = Frecursivas.potencia(5,4);
 		System.out.println(x);
 		
+		System.out.println(Frecursivas.sumarDig(523));
 		
 		/*System.out.println(Frecursivas.factorial(5));
 		for (int i = 0; i < 10; i++) {
