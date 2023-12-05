@@ -67,7 +67,6 @@ public class Frecursivas {
 			return base * potencia(base, exponente-1);
 		}
 
-		
 	}
 	
 	/**
@@ -77,9 +76,11 @@ public class Frecursivas {
 	 */
 	
 	public static int sumarDig (int num) {
+		
 		if(num == 0) {
 			return 0;
 		}
+		
 		else return (num%10+ sumarDig(num/10));
 	}
 	

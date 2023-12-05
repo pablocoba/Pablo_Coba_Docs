@@ -150,4 +150,9 @@ GRANT SELECT ON JARDIPCL .* TO PCL;
 ALTER TABLE EMPLEADOS ADD FOREIGN KEY (puesto) REFERENCES OFICINAS (codigoOficina);
 ALTER TABLE EMPLEADOS DROP FOREIGN KEY empleados_ibfk_3;
 
+select e.nombre, c.nombrecliente from empleados e inner join clientes c on e.Codigoempleado = c.codigoempleadorepventas;
+select e.nombre, c.nombrecliente from empleados e, clientes c where e.codigoempleado=c.codigoempleadorepventas;
+select e.nombre, c.nombrecliente from empleados e left join clientes c on e.Codigoempleado = c.codigoempleadorepventas;
+/*hacer eso pero tmbn con detallepagos, sacando transaccion y cantidad*/
+
 notee;

@@ -1,50 +1,3 @@
-const calculator = document.querySelector('.calculator')
-const keys = calculator.querySelector('.calculator__keys')
-
-keys.addEventListener('click', e =>{
-    if(e.target.matches('button')){
-
-    }
-})
-
-const key = e.target
-const action = key.dataset.action
-
-if(!action){
-    console.log('number key!')
-}
-
-if(
-    action === "add" || action === "subtract" || action === "multiply" || action === "divide" 
-){
-    console.log('operator key!')
-}
-
-if(action === 'clear'){
-    console.log('clear key!')
-}
-
-if(action === 'calculate'){
-    console.log('equal key!')
-}
-
-function sum(x,y){
-
-    let summ = parseInt(x)+parseInt(y)
-    document.getElementById("res").style.visibility = 'visible';
-    document.getElementById("res").innerHTML = summ;
-
-}
-
-function alm(){
-
-    let tecla = document.querySelector(".num");
-    num = num + tecla;
-    console.log(num);
-}
-
-
-
 function multiplicar(){
     let x = prompt("Introduce un número a multiplicar")
     let y = prompt("Introduce otro número")
@@ -95,7 +48,7 @@ function mayor(){
 
 function encabezado(){
     let x = prompt("Introduce un texto")
-    let y = prompt("Introduce un número del 1 al 6")
+    let y = parseInt(document.getElementById("ache"))
     let that = document.getElementById("he");
     let p = document.createElement('h' + y);
     p.setAttribute('id',that.getAttribute('id'));
